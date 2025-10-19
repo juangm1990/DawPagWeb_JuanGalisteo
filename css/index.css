@@ -1,11 +1,18 @@
-/* ======== GENERAL ======== */
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #333;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
 }
 
-/* ======== CABECERA ======== */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+
+/* CABECERA */
 .cabecera {
     display: flex;
     justify-content: space-between;
@@ -15,9 +22,7 @@ body {
     background-color: #fff;
 }
 
-.logo img {
-    height: 40px;
-}
+.logo img { height: 40px; }
 
 .menu-principal ul {
     list-style: none;
@@ -30,8 +35,11 @@ body {
 .menu-principal a {
     text-decoration: none;
     color: #333;
-    font-weight: bold;
+    font-weight: 600;
+    transition: color 0.3s;
 }
+
+.menu-principal a:hover { color: #009f60; }
 
 .carritoycuenta {
     display: flex;
@@ -42,7 +50,10 @@ body {
 .icono-carrito {
     width: 26px;
     height: 26px;
+    transition: transform 0.2s;
 }
+
+.icono-carrito:hover { transform: scale(1.1); }
 
 .boton-cuenta {
     background-color: #009f60;
@@ -50,9 +61,13 @@ body {
     padding: 8px 14px;
     border-radius: 4px;
     text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
 }
 
-/* ======== BUSCADOR ======== */
+.boton-cuenta:hover { background-color: #00784b; }
+
+/* BUSCADOR */
 .zona-buscador {
     background-color: #1f2c3d;
     display: flex;
@@ -69,113 +84,149 @@ body {
 
 .zona-buscador button {
     background-color: #009f60;
-    color: white;
+    color: #fff;
     border: none;
     padding: 8px 16px;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
+    font-weight: 500;
 }
 
-/* ======== IMAGEN PRINCIPAL ======== */
+/* PORTADA (solo clic, sin zoom) */
 .imagen-portada {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f9f9f9;
+    background-color: #fff;
+    margin-top: 40px;
 }
 
-.imagen-portada img {
+.portada-enlace {
+    display: block;
+    cursor: pointer; /* muestra la manita al pasar el ratón */
+}
+
+.portada-enlace img {
     width: 90%;
     max-width: 1200px;
     display: block;
+    margin: 0 auto;
     border-radius: 6px;
 }
 
-/* ======== NOVEDADES ======== */
+/* NOVEDADES */
 .bloque-novedades {
     text-align: center;
     padding: 40px 0;
+    background-color: #fff;
+}
+
+.bloque-novedades h2 {
+    margin-bottom: 30px;
+    font-weight: 600;
 }
 
 .galeria-libros {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 32px;
-    margin-top: 20px;
+    gap: 40px;
+    margin: 0 auto;
+    max-width: 1000px;
 }
 
 .tarjeta-libro {
-    width: 160px;
+    width: 180px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .tarjeta-libro img {
     width: 100%;
     border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* ======== PROMOCIONES ======== */
+.tarjeta-libro:hover {
+    transform: translateY(-6px);
+}
+
+.tarjeta-libro:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+/* PROMOCIONES */
 .bloque-promociones {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    background-color: #f5f5f5;
+    background-color: #fff;
     padding: 32px;
 }
 
 .tarjeta-promocion {
     width: 300px;
     text-align: center;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .tarjeta-promocion img {
     width: 100%;
     border-radius: 6px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.tarjeta-promocion button {
-    background-color: #1f2c3d;
-    color: #fff;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+.tarjeta-promocion:hover {
+    transform: translateY(-6px);
 }
 
-/* ======== PIE DE PÁGINA ======== */
+.tarjeta-promocion:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+/* FOOTER */
 .pie-pagina {
     background-color: #1f2c3d;
     color: #fff;
-    padding: 40px 20px 0 20px;
+    padding: 40px 20px 20px;
+    margin: 0;
 }
 
 .zona-superior-footer {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    text-align: left;
     gap: 20px;
+    text-align: left;
 }
 
 .columna-footer {
     width: 250px;
 }
 
+.columna-footer h4 {
+    color: #009f60;
+    margin-bottom: 10px;
+}
+
 .columna-footer a {
     display: block;
-    color: #cccccc;
+    color: #fff;
     text-decoration: none;
     margin-top: 8px;
 }
 
-.columna-footer a:hover {
-    color: #ffffff;
-}
+.columna-footer a:hover { color: #009f60; }
 
 .zona-inferior-footer {
     text-align: center;
-    margin-top: 20px;
-    padding-top: 10px;
-    border-top: 1px solid #555;
+    margin-top: 30px;
     font-size: 14px;
 }
