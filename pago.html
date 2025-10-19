@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pago — Librería GranMaestre</title>
+  <link rel="stylesheet" href="css/interfazlibros.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body>
+  <!-- CABECERA -->
+  <header class="cabecera">
+    <div class="logo">
+      <a href="index.html"><img src="img/logo.png" alt="Logo Librería GranMaestre"></a>
+    </div>
+    <nav class="menu-principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="tienda.html">Tienda</a></li>
+        <li><a href="carrito.html">Carrito</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="carritoycuenta">
+      <a href="carrito.html"><img src="img/carrito.png" alt="Carrito" class="icono-carrito"></a>
+      <a href="cuenta.html" class="boton-cuenta">Mi cuenta</a>
+    </div>
+  </header>
+
+  <!-- CUERPO -->
+  <main class="area-pago">
+    <h1>Finalizar compra</h1>
+
+    <form class="formulario-pago" action="#" method="post">
+      <section class="bloque-formulario">
+        <h2>Datos personales</h2>
+        <label>Nombre y apellidos:</label>
+        <input type="text" name="nombre" required>
+
+        <label>Correo electrónico:</label>
+        <input type="email" name="correo" required>
+
+        <label>Teléfono:</label>
+        <input type="tel" name="telefono" required>
+      </section>
+
+      <section class="bloque-formulario">
+        <h2>Dirección de envío</h2>
+        <label>Calle y número:</label>
+        <input type="text" name="direccion" required>
+
+        <label>Ciudad:</label>
+        <input type="text" name="ciudad" required>
+
+        <label>Código postal:</label>
+        <input type="text" name="cp" required>
+
+        <label>País:</label>
+        <input type="text" name="pais" required>
+      </section>
+
+      <section class="bloque-formulario">
+        <h2>Método de pago</h2>
+        <label><input type="radio" name="pago" required> Tarjeta de crédito / débito</label><br>
+        <label><input type="radio" name="pago"> PayPal</label><br>
+        <label><input type="radio" name="pago"> Contra reembolso</label>
+      </section>
+
+      <div class="resumen-pago">
+        <p><strong>Total a pagar:</strong> 45,23 €</p>
+        <button type="submit" class="boton-finalizar">Confirmar pedido</button>
+      </div>
+    </form>
+  </main>
+
+  <!-- PIE -->
+  <footer class="pie-pagina">
+    <div class="zona-inferior-footer">
+      <p>© 2025 Juan Galisteo | Todos los derechos reservados</p>
+    </div>
+  </footer>
+</body>
+</html>

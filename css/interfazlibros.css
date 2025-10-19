@@ -277,3 +277,76 @@ input.cantidad {
 .boton-finalizar:hover {
   background-color: #00784b;
 }
+
+
+/* CSS PAGAR */
+
+/* PAGO */
+.area-pago {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.area-pago h1 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.formulario-pago {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.bloque-formulario {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.bloque-formulario h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #009f60;
+}
+
+.bloque-formulario label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 500;
+}
+
+.bloque-formulario input[type="text"],
+.bloque-formulario input[type="email"],
+.bloque-formulario input[type="tel"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.resumen-pago {
+  text-align: right;
+}
+
+.resumen-pago p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.boton-finalizar {
+  background-color: #009f60;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.boton-finalizar:hover {
+  background-color: #00784b;
+}
