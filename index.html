@@ -4,119 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Librería GranMaestre</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
 </head>
 <body>
-    <div class="estructura">
+    <!-- CABECERA -->
+    <header class="cabecera">
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="Logo Librería GranMaestre"></a>
+        </div>
 
-        <header>
-            <div class="logo">
-                <a href="#">
-                    <img src="imagenes/logo.png" alt="LOGO">
-                </a>
+        <nav class="menu-principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="tienda.html">Libros</a></li>
+                <li><a href="novedades.html">Novedades</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="carritoycuenta">
+            <a href="carrito.html"><img src="img/carrito.png" alt="Carrito de compra" class="icono-carrito"></a>
+            <a href="cuenta.html" class="boton-cuenta">Mi cuenta</a>
+        </div>
+    </header>
+
+    <!-- BUSCADOR -->
+    <section class="zona-buscador">
+        <input type="text" placeholder="Buscar por título, autor o ISBN">
+        <button>Buscar</button>
+    </section>
+
+    <!-- IMAGEN PRINCIPAL -->
+    <section class="imagen-portada">
+        <img src="img/portada.png" alt="Estantería con libros">
+    </section>
+
+    <!-- NOVEDADES -->
+    <section class="bloque-novedades">
+        <h2>Novedades</h2>
+        <div class="galeria-libros">
+            <article class="tarjeta-libro">
+                <img src="img/ego.png" alt="Ego y Supraconsciencia">
+                <h3>Ego y Supraconsciencia</h3>
+                <p>Dr. Manuel Sans Segarra</p>
+            </article>
+
+            <article class="tarjeta-libro">
+                <img src="img/danbrown.png" alt="El Último Secreto">
+                <h3>El Último Secreto</h3>
+                <p>Dan Brown</p>
+            </article>
+
+            <article class="tarjeta-libro">
+                <img src="img/trama.png" alt="La Trama Masónica">
+                <h3>La Trama Masónica</h3>
+                <p>Manuel Guerra</p>
+            </article>
+
+            <article class="tarjeta-libro">
+                <img src="img/libertad.png" alt="Libertad o Tiranía">
+                <h3>Libertad o Tiranía</h3>
+                <p>Cristina Martín Jiménez</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- PROMOCIONES -->
+    <section class="bloque-promociones">
+        <article class="tarjeta-promocion">
+            <img src="img/compra-online.png" alt="Compra online">
+            <h3>Compra online y recógelo en nuestra librería</h3>
+            <button>Ver más</button>
+        </article>
+
+        <article class="tarjeta-promocion">
+            <img src="img/autores.png" alt="Libros firmados">
+            <h3>Libros firmados por tu autor favorito</h3>
+            <button>Ver más</button>
+        </article>
+
+        <article class="tarjeta-promocion">
+            <img src="img/socio.png" alt="Hazte socio">
+            <h3>Hazte socio en menos de un minuto</h3>
+            <button>Ver más</button>
+        </article>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+        <div class="zona-superior-footer">
+            <div class="columna-footer">
+                <h4>Librería GranMaestre</h4>
+                <p>Tu espacio para descubrir libros que inspiran y transforman.</p>
             </div>
 
-            <nav class="menu-principal">
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Libros</a></li>
-                    <li><a href="#">Novedades</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </nav>
-
-            <div class="acciones">
-                <a class="boton-carrito" href="#">
-                    <img src="imagenes/carrito.png" alt="TIENDA">
-                </a>
-                <a class="boton-cuenta" href="#">Mi Cuenta</a>
+            <div class="columna-footer">
+                <h4>Secciones</h4>
+                <a href="index.html">Inicio</a>
+                <a href="tienda.html">Libros</a>
+                <a href="novedades.html">Novedades</a>
+                <a href="contacto.html">Contacto</a>
             </div>
-        </header>
 
-        <main>
-            <section class="buscador">
-                <input type="text" placeholder="Título, autor o ISBN">
-                <button>Buscar</button>
-            </section>
+            <div class="columna-footer">
+                <h4>Contacto</h4>
+                <p>info@granmaestre.com</p>
+                <p>+34 600 000 000</p>
+            </div>
+        </div>
 
-            <section class="imagen-principal">
-                <figure>
-                    <img src="imagenes/portada-libros.jpg" alt="Estantería de libros en una librería">
-                </figure>
-            </section>
-
-            <section class="novedades">
-                <h2>Novedades</h2>
-
-                <div class="lista-libros">
-                    <figure>
-                        <img src="imagenes/ego.jpg" alt="Ego y Supraconsciencia">
-                        <figcaption>
-                            <strong>Ego y Supraconsciencia</strong><br>
-                            Dr. Manuel Sans Segarra
-                        </figcaption>
-                    </figure>
-
-                    <figure>
-                        <img src="imagenes/danbrown.jpg" alt="El Último Secreto">
-                        <figcaption>
-                            <strong>El Último Secreto</strong><br>
-                            Dan Brown
-                        </figcaption>
-                    </figure>
-
-                    <figure>
-                        <img src="imagenes/trama.jpg" alt="La Trama Masónica">
-                        <figcaption>
-                            <strong>La Trama Masónica</strong><br>
-                            Manuel Guerra
-                        </figcaption>
-                    </figure>
-
-                    <figure>
-                        <img src="imagenes/libertad.jpg" alt="Libertad o Tiranía">
-                        <figcaption>
-                            <strong>Libertad o Tiranía</strong><br>
-                            Cristina Martín Jiménez
-                        </figcaption>
-                    </figure>
-                </div>
-            </section>
-
-            <section class="promociones">
-                <article>
-                    <img src="imagenes/compra-online.jpg" alt="Compra online">
-                    <h3>Compra online y recógelo en nuestra librería</h3>
-                    <button>Ver más</button>
-                </article>
-
-                <article>
-                    <img src="imagenes/autores.jpg" alt="Libros firmados">
-                    <h3>Libros firmados por tu autor favorito</h3>
-                    <button>Ver más</button>
-                </article>
-
-                <article>
-                    <img src="imagenes/socio.jpg" alt="Hazte socio">
-                    <h3>Hazte socio en menos de un minuto</h3>
-                    <button>Ver más</button>
-                </article>
-            </section>
-        </main>
-
-        <footer>
-            
-
-            <nav class="menu-footer">
-                <a href="#">Inicio</a>
-                <a href="#">Libros</a>
-                <a href="#">Novedades</a>
-                <a href="#">Contacto</a>
-            </nav>
-
+        <div class="zona-inferior-footer">
             <p>© 2025 Juan Galisteo | Todos los derechos reservados</p>
-        </footer>
-
-    </div>
+        </div>
+    </footer>
 </body>
 </html>
