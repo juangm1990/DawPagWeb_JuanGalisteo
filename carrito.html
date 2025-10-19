@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito — Librería GranMaestre</title>
+  <link rel="stylesheet" href="css/interfazlibros.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+
+<body>
+  <!-- CABECERA -->
+  <header class="cabecera">
+    <div class="logo">
+      <a href="index.html"><img src="img/logo.png" alt="Logo Librería GranMaestre"></a>
+    </div>
+    <nav class="menu-principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="tienda.html">Tienda</a></li>
+        <li><a href="novedades.html">Novedades</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="carritoycuenta">
+      <a href="carrito.html"><img src="img/carrito.png" alt="Carrito" class="icono-carrito"></a>
+      <a href="cuenta.html" class="boton-cuenta">Mi cuenta</a>
+    </div>
+  </header>
+
+  <!-- CUERPO -->
+  <main class="area-carrito">
+    <h1>Tu carrito</h1>
+
+    <table class="tabla-carrito">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Precio</th>
+          <th>Cantidad</th>
+          <th>Subtotal</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="producto">
+            <img src="img/ego.png" alt="Ego y Supraconsciencia">
+            <span>Ego y Supraconsciencia</span>
+          </td>
+          <td>23,33 €</td>
+          <td>1</td>
+          <td>23,33 €</td>
+          <td><a href="#" class="eliminar">X</a></td>
+        </tr>
+
+        <tr>
+          <td class="producto">
+            <img src="img/danbrown.png" alt="El Último Secreto">
+            <span>El Último Secreto</span>
+          </td>
+          <td>21,90 €</td>
+          <td>1</td>
+          <td>21,90 €</td>
+          <td><a href="#" class="eliminar">X</a></td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <div class="resumen-carrito">
+      <p><strong>Total:</strong> 55,13 €</p>
+      <a href="#" class="boton-finalizar">Finalizar compra</a>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="pie-pagina">
+    <div class="zona-superior-footer">
+      <div class="columna-footer">
+        <h4>Librería GranMaestre</h4>
+        <p>En Librería GranMaestre creemos en el poder transformador de la lectura.</p>
+      </div>
+      <div class="columna-footer">
+        <h4>Enlaces</h4>
+        <a href="index.html">Inicio</a>
+        <a href="tienda.html">Tienda</a>
+        <a href="novedades.html">Novedades</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+      <div class="columna-footer">
+        <h4>Contacto</h4>
+        <p>Calle de la Sabiduría 33<br>39512 Madrid, España</p>
+        <p>info@granmaestre.com</p>
+        <p>+34 666 999 333</p>
+      </div>
+    </div>
+    <div class="zona-inferior-footer">
+      <p>© 2025 Juan Galisteo | Todos los derechos reservados</p>
+    </div>
+  </footer>
+</body>
+
+</html>
