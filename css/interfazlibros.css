@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  color: #333;
+  background-color: #fff;
+}
+
+/* CABECERA */
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.menu-principal ul {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-principal a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.menu-principal a:hover {
+  color: #009f60;
+}
+
+.menu-principal a.activo {
+  color: #009f60;
+}
+
+.carritoycuenta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icono-carrito {
+  width: 26px;
+  height: 26px;
+  transition: transform 0.2s;
+}
+
+.icono-carrito:hover {
+  transform: scale(1.1);
+}
+
+.boton-cuenta {
+  background-color: #009f60;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.boton-cuenta:hover {
+  background-color: #00784b;
+}
+
+/* SECCIÓN PRINCIPAL DEL LIBRO */
+.area-libro {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.portada-libro {
+  width: 320px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.detalles-libro {
+  flex: 1;
+}
+
+.detalles-libro h1 {
+  font-size: 26px;
+  margin-bottom: 4px;
+}
+
+.detalles-libro h2 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.detalles-libro .precio {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.detalles-libro p {
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.botones-compra {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.boton-comprar {
+  background-color: #009f60;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.boton-comprar:hover {
+  background-color: #00784b;
+}
+
+input.cantidad {
+  width: 50px;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* INFORMACIÓN EXTRA */
+.info-extra {
+  margin-top: 30px;
+}
+
+.info-extra h3 {
+  font-size: 16px;
+  color: #009f60;
+  margin-bottom: 8px;
+}
+
+.info-extra p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* FOOTER */
+.pie-pagina {
+  background-color: #1f2c3d;
+  color: #fff;
+  padding: 40px 20px 20px;
+  margin-top: 40px;
+}
+
+.zona-superior-footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align: left;
+}
+
+.columna-footer {
+  width: 250px;
+}
+
+.columna-footer h4 {
+  color: #009f60;
+  margin-bottom: 10px;
+}
+
+.columna-footer a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 8px;
+}
+
+.columna-footer a:hover {
+  color: #009f60;
+}
+
+.zona-inferior-footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+}

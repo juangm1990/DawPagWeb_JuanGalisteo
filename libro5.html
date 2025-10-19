@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1984 — Librería GranMaestre</title>
+  <link rel="stylesheet" href="css/interfazlibros.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+<body>
+  <header class="cabecera">
+    <div class="logo">
+      <a href="index.html"><img src="img/logo.png" alt="Logo Librería GranMaestre"></a>
+    </div>
+    <nav class="menu-principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a class="activo" href="tienda.html">Tienda</a></li>
+        <li><a href="novedades.html">Novedades</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="carritoycuenta">
+      <a href="carrito.html"><img src="img/carrito.png" alt="Carrito" class="icono-carrito"></a>
+      <a href="cuenta.html" class="boton-cuenta">Mi cuenta</a>
+    </div>
+  </header>
+
+  <main class="area-libro">
+    <img src="img/1984.png" alt="1984" class="portada-libro">
+    <div class="detalles-libro">
+      <h1>1984</h1>
+      <h2>George Orwell</h2>
+      <p class="precio">15,90 €</p>
+      <p><strong>Sinopsis:</strong><br>Una obra maestra de la literatura distópica que retrata un futuro dominado por la vigilancia, el control y la pérdida de libertad. Una advertencia más vigente que nunca.</p>
+      <div class="botones-compra">
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" class="cantidad" name="cantidad" min="1" value="1">
+        <a href="carrito.html"><button type="button" class="boton-comprar">Comprar</button></a>
+      </div>
+      <div class="info-extra">
+        <h3>Detalles del producto</h3>
+        <p>ISBN: 978-84-112244-6-7</p>
+        <p>Editorial: Debolsillo</p>
+        <p>Encuadernación: Tapa blanda</p>
+        <p>Idioma: Español</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="pie-pagina">
+    <div class="zona-inferior-footer">
+      <p>© 2025 Juan Galisteo | Todos los derechos reservados</p>
+    </div>
+  </footer>
+</body>
+</html>
