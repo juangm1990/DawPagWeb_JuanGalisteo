@@ -230,3 +230,49 @@ html, body {
     margin-top: 30px;
     font-size: 14px;
 }
+
+/* BLOQUE SOBRE NOSOTROS */
+.bloque-sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 40px;
+    background-color: #1f2c3d; /* azul oscuro */
+    color: #fff; /* texto blanco */
+}
+
+.texto-sobre {
+    max-width: 500px;
+}
+
+.texto-sobre h2 {
+    color: #009f60; /* verde del botón */
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.texto-sobre p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #f0f0f0;
+}
+
+.boton-leer-mas {
+    background-color: #009f60;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.boton-leer-mas:hover {
+    background-color: #00784b;
+}
+
+.imagen-sobre img {
+    width: 350px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
