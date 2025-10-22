@@ -10,7 +10,7 @@ html, body {
   background-color: #fff;
 }
 
-/* HERO PROPIO DE NOVEDADES */
+/* NOVEDADES */
 .hero-novedades {
   background-color: #1f2c3d; /* azul corporativo */
   color: #fff;
@@ -37,7 +37,7 @@ html, body {
   margin: 0;
 }
 
-/* GALERÍA GRANDE DE NOVEDADES */
+/* GALERÍA NOVEDADES */
 .contenedor-novedades {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 grandes por fila */
@@ -63,8 +63,8 @@ html, body {
 
 .tarjeta-novedad img {
   width: 100%;
-  height: 420px;      /* grande y uniforme */
-  object-fit: cover;  /* recorta limpio */
+  height: 420px;      /* Grande y uniforme */
+  object-fit: cover;  
   display: block;
   transition: transform 0.3s ease;
 }
