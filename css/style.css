@@ -233,6 +233,16 @@ html, body {
     text-align: center;
     margin-top: 30px;
     font-size: 14px;
+    color: #fff; /* ← esto hace que el texto sea blanco */
+}
+
+.zona-inferior-footer a {
+    color: #fff; /* enlaces en blanco */
+    text-decoration: none;
+}
+
+.zona-inferior-footer a:hover {
+    color: #009f60; /* opcional: verde al pasar el ratón */
 }
 
 /* BLOQUE SOBRE NOSOTROS */
