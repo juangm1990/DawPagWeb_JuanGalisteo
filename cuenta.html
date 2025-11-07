@@ -25,15 +25,41 @@
         <a class="navbar-brand fw-semibold" href="index.html">
           <img src="img/logo.png" alt="Librería GranMaestre" height="40">
         </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarGranMaestre"
+                aria-controls="navbarGranMaestre" aria-expanded="false" aria-label="Menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarGranMaestre">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
+            <li class="nav-item"><a class="nav-link" href="novedades.html">Novedades</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+
+          <ul class="navbar-nav">
+            <li class="nav-item me-3">
+              <a href="carrito.html" class="nav-link position-relative">
+                <img src="img/carrito.png" alt="Carrito" width="24" height="24">
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">0</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="cuenta.html" class="btn btn-success px-3 py-1 fw-semibold">Mi cuenta</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
   </header>
 
-  <!-- CONTENIDO PRINCIPAL -->
+  <!-- FORMULARIO DE LOGIN -->
   <main class="flex-grow-1 d-flex align-items-center justify-content-center py-5">
     <section class="bg-white p-5 rounded-4 shadow-sm" style="width:100%; max-width:400px;">
       <div class="text-center mb-4">
-        <img src="img/logo.png" alt="Logo Librería GranMaestre" height="60" class="mb-3">
+        <img src="img/logo.png" alt="Logo Librería GranMaestre" height="40" class="mb-3">
         <h1 class="h4 fw-bold">Iniciar sesión</h1>
       </div>
 

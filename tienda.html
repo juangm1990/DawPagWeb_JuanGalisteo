@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tienda — Librería GranMaestre</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pago — Librería GranMaestre</title>
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
+
   <!-- Iconos -->
-  <link rel="icon" type="image/png" href="img/logo.png" />
-  <link rel="icon" type="image/x-icon" href="img/logo-icono.ico" />
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <link rel="icon" type="image/x-icon" href="img/logo-icono.ico">
 </head>
 
-<body class="d-flex flex-column min-vh-100 bg-white">
+<body class="d-flex flex-column min-vh-100 bg-light pago-page">
 
-  <!-- ================================= -->
   <!-- CABECERA -->
-  <!-- ================================= -->
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm">
       <div class="container">
@@ -34,8 +34,8 @@
         <div class="collapse navbar-collapse" id="navbarGranMaestre">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
             <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link active fw-semibold" href="tienda.html">Tienda</a></li>
-            <li class="nav-item"><a class="nav-link" href="novedades.html">Novedades</a></li>
+            <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
+            <li class="nav-item"><a class="nav-link" href="carrito.html">Carrito</a></li>
             <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
           </ul>
 
@@ -55,187 +55,83 @@
     </nav>
   </header>
 
-  <!-- ================================= -->
-  <!-- BUSCADOR -->
-  <!-- ================================= -->
-  <section class="zona-buscador text-center bg-dark py-3">
-    <input type="text" placeholder="Título, Autor o ISBN">
-    <button>Buscar</button>
-  </section>
-
-  <!-- ================================= -->
-  <!-- CATEGORÍAS -->
-  <!-- ================================= -->
-  <section class="zona-categorias border-bottom">
+  <!-- FORMULARIO DE PAGO -->
+  <main class="flex-grow-1 py-5">
     <div class="container">
-      <nav class="lista-categorias d-flex flex-wrap justify-content-center gap-3 py-3">
-        <a href="#" class="text-decoration-none text-dark fw-semibold">Imprescindibles</a>
-        <a href="#" class="text-decoration-none text-dark fw-semibold">Infantil</a>
-        <a href="#" class="text-decoration-none text-dark fw-semibold">Juvenil</a>
-        <a href="#" class="text-decoration-none text-dark fw-semibold">Ciencia Ficción</a>
-        <a href="#" class="text-decoration-none text-dark fw-semibold">Historia</a>
-        <a href="#" class="text-decoration-none text-dark fw-semibold">Aventuras</a>
-        <a href="#" class="text-decoration-none text-dark fw-semibold">Fantasía</a>
-        <a href="#" class="text-decoration-none text-dark fw-semibold">Audiolibros</a>
-        <a href="#" class="text-decoration-none text-dark fw-semibold">A - Z</a>
-      </nav>
-    </div>
-  </section>
+      <div class="bg-white p-5 rounded-4 shadow-sm mx-auto" style="max-width: 700px;">
+        <h1 class="h3 fw-bold text-center mb-4">Finalizar compra</h1>
 
-  <!-- ================================= -->
-  <!-- MENÚ PRINCIPAL -->
-  <!-- ================================= -->
-  <section class="titulo-seccion py-4 text-center">
-    <div class="container">
-      <h1 class="fw-bold text-uppercase">Libros destacados</h1>
-    </div>
-  </section>
-
-  <!-- ================================= -->
-  <!-- PRODUCTOS -->
-  <!-- ================================= -->
-  <main class="flex-grow-1 py-3">
-    <div class="container">
-      <div class="row g-4 justify-content-center">
-
-        <!-- 1 -->
-        <div class="col-6 col-md-3">
-          <a href="libro1.html" class="text-decoration-none text-dark">
-            <div class="card border-0">
-              <img src="img/ego.png" class="card-img-top rounded shadow-sm" alt="Ego y Supraconsciencia">
-              <div class="card-body text-center">
-                <h3 class="h6 fw-semibold mb-0">Ego y Supraconsciencia</h3>
-                <p class="text-muted mb-1">Dr. Manuel Sans Segarra</p>
-                <p class="small text-secondary mb-1">Tapa dura</p>
-                <p class="fw-bold text-success mb-0">Envío GRATIS</p>
+        <form class="formulario-pago" action="#" method="post">
+          <!-- DATOS PERSONALES -->
+          <section class="mb-4">
+            <h2 class="h5 text-success fw-bold mb-3">Datos personales</h2>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <input type="text" name="nombre" class="form-control" placeholder="Nombre y apellidos" required>
+              </div>
+              <div class="col-md-6">
+                <input type="email" name="correo" class="form-control" placeholder="Correo electrónico" required>
+              </div>
+              <div class="col-md-6">
+                <input type="tel" name="telefono" class="form-control" placeholder="Teléfono" required>
               </div>
             </div>
-          </a>
-        </div>
+          </section>
 
-        <!-- 2 -->
-        <div class="col-6 col-md-3">
-          <a href="libro2.html" class="text-decoration-none text-dark">
-            <div class="card border-0">
-              <img src="img/danbrown.png" class="card-img-top rounded shadow-sm" alt="El Último Secreto">
-              <div class="card-body text-center">
-                <h3 class="h6 fw-semibold mb-0">El Último Secreto</h3>
-                <p class="text-muted mb-1">Dan Brown</p>
-                <p class="small text-secondary mb-1">Tapa dura</p>
-                <p class="fw-bold text-success mb-0">Envío GRATIS</p>
+          <!-- DIRECCIÓN -->
+          <section class="mb-4">
+            <h2 class="h5 text-success fw-bold mb-3">Dirección de envío</h2>
+            <div class="row g-3">
+              <div class="col-md-12">
+                <input type="text" name="direccion" class="form-control" placeholder="Calle y número" required>
+              </div>
+              <div class="col-md-6">
+                <input type="text" name="ciudad" class="form-control" placeholder="Ciudad" required>
+              </div>
+              <div class="col-md-3">
+                <input type="text" name="cp" class="form-control" placeholder="Código postal" required>
+              </div>
+              <div class="col-md-3">
+                <input type="text" name="pais" class="form-control" placeholder="País" required>
               </div>
             </div>
-          </a>
-        </div>
+          </section>
 
-        <!-- 3 -->
-        <div class="col-6 col-md-3">
-          <a href="libro3.html" class="text-decoration-none text-dark">
-            <div class="card border-0">
-              <img src="img/trama.png" class="card-img-top rounded shadow-sm" alt="La Trama Masónica">
-              <div class="card-body text-center">
-                <h3 class="h6 fw-semibold mb-0">La Trama Masónica</h3>
-                <p class="text-muted mb-1">Manuel Guerra</p>
-                <p class="small text-secondary mb-1">Tapa dura</p>
-                <p class="fw-bold text-success mb-0">Envío GRATIS</p>
-              </div>
+          <!-- MÉTODO DE PAGO -->
+          <section class="mb-4">
+            <h2 class="h5 text-success fw-bold mb-3">Método de pago</h2>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="radio" name="pago" id="tarjeta" required>
+              <label class="form-check-label" for="tarjeta">Tarjeta de crédito / débito</label>
             </div>
-          </a>
-        </div>
-
-        <!-- 4 -->
-        <div class="col-6 col-md-3">
-          <a href="libro4.html" class="text-decoration-none text-dark">
-            <div class="card border-0">
-              <img src="img/libertad.png" class="card-img-top rounded shadow-sm" alt="Libertad o Tiranía">
-              <div class="card-body text-center">
-                <h3 class="h6 fw-semibold mb-0">Libertad o Tiranía</h3>
-                <p class="text-muted mb-1">Cristina Martín Jiménez</p>
-                <p class="small text-secondary mb-1">Tapa dura</p>
-                <p class="fw-bold text-success mb-0">Envío GRATIS</p>
-              </div>
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="radio" name="pago" id="paypal">
+              <label class="form-check-label" for="paypal">PayPal</label>
             </div>
-          </a>
-        </div>
-
-        <!-- 5 -->
-        <div class="col-6 col-md-3">
-          <a href="libro5.html" class="text-decoration-none text-dark">
-            <div class="card border-0">
-              <img src="img/1984.png" class="card-img-top rounded shadow-sm" alt="1984">
-              <div class="card-body text-center">
-                <h3 class="h6 fw-semibold mb-0">1984</h3>
-                <p class="text-muted mb-1">George Orwell</p>
-                <p class="small text-secondary mb-1">Tapa dura</p>
-                <p class="fw-bold text-success mb-0">Envío GRATIS</p>
-              </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="pago" id="reembolso">
+              <label class="form-check-label" for="reembolso">Contra reembolso</label>
             </div>
-          </a>
-        </div>
+          </section>
 
-        <!-- 6 -->
-        <div class="col-6 col-md-3">
-          <a href="libro6.html" class="text-decoration-none text-dark">
-            <div class="card border-0">
-              <img src="img/geometria.png" class="card-img-top rounded shadow-sm" alt="Geometría Sagrada de la Gran Pirámide">
-              <div class="card-body text-center">
-                <h3 class="h6 fw-semibold mb-0">Geometría Sagrada de la Gran Pirámide</h3>
-                <p class="text-muted mb-1">Iván Patiño</p>
-                <p class="small text-secondary mb-1">Tapa dura</p>
-                <p class="fw-bold text-success mb-0">Envío GRATIS</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- 7 -->
-        <div class="col-6 col-md-3">
-          <a href="libro7.html" class="text-decoration-none text-dark">
-            <div class="card border-0">
-              <img src="img/cabala.png" class="card-img-top rounded shadow-sm" alt="El Secreto Universal de la Cábala">
-              <div class="card-body text-center">
-                <h3 class="h6 fw-semibold mb-0">El Secreto Universal de la Cábala</h3>
-                <p class="text-muted mb-1">Leo Schaya</p>
-                <p class="small text-secondary mb-1">Tapa dura</p>
-                <p class="fw-bold text-success mb-0">Envío GRATIS</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- 8 -->
-        <div class="col-6 col-md-3">
-          <a href="libro8.html" class="text-decoration-none text-dark">
-            <div class="card border-0">
-              <img src="img/matrix.png" class="card-img-top rounded shadow-sm" alt="Hijos de Matrix">
-              <div class="card-body text-center">
-                <h3 class="h6 fw-semibold mb-0">Hijos de Matrix</h3>
-                <p class="text-muted mb-1">David Icke</p>
-                <p class="small text-secondary mb-1">Tapa dura</p>
-                <p class="fw-bold text-success mb-0">Envío GRATIS</p>
-              </div>
-            </div>
-          </a>
-        </div>
-
+          <!-- TOTAL -->
+          <div class="border-top pt-3 text-end">
+            <p class="h5 mb-3"><strong>Total a pagar:</strong> 45,23 €</p>
+            <button type="submit" class="btn btn-success px-4 py-2 fw-semibold">Confirmar pedido</button>
+          </div>
+        </form>
       </div>
     </div>
   </main>
 
-  <!-- ================================= -->
   <!-- FOOTER -->
-  <!-- ================================= -->
   <footer class="bg-dark text-white mt-auto pt-5 pb-3">
     <div class="container">
       <div class="row text-center text-md-start">
         <div class="col-md-4 mb-4">
           <h4 class="text-success">Librería GranMaestre</h4>
-          <p>
-            En Librería GranMaestre creemos en el poder transformador de la lectura.
-            Nuestro catálogo está cuidadosamente seleccionado para todos.
-          </p>
+          <p>En Librería GranMaestre creemos en el poder transformador de la lectura. Nuestro catálogo está cuidadosamente seleccionado para todos.</p>
         </div>
-
         <div class="col-md-4 mb-4">
           <h4 class="text-success">Enlaces</h4>
           <ul class="list-unstyled">
@@ -245,23 +141,17 @@
             <li><a href="contacto.html" class="text-white text-decoration-none">Contacto</a></li>
           </ul>
         </div>
-
         <div class="col-md-4 mb-4">
           <h4 class="text-success">Contacto</h4>
           <p>Calle de la Sabiduría 33<br>39512 Madrid, España</p>
-          <p>info@granmaestre.com</p>
-          <p>+34 666 999 333</p>
+          <p>info@granmaestre.com<br>+34 666 999 333</p>
         </div>
       </div>
-
       <div class="border-top border-secondary pt-3 text-center small">
         <a href="https://creativecommons.org" class="text-white text-decoration-none">MEDAC DAW</a> © 2025 by 
         <a href="https://creativecommons.org" class="text-white text-decoration-none">Juan Bautista Galisteo Marqués</a> 
         is licensed under 
         <a href="https://creativecommons.org/licenses/by-nd/4.0/" class="text-white text-decoration-none">CC BY-ND 4.0</a>
-        <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;">
-        <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;">
-        <img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;">
       </div>
     </div>
   </footer>
