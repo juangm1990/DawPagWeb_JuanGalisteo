@@ -4,55 +4,137 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>1984 — Librería GranMaestre</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
+  <!-- Iconos -->
   <link rel="icon" type="image/png" href="img/logo.png">
-  <link rel="icon" type="image/x-icon" href="/img/logo-icono.ico">
+  <link rel="icon" type="image/x-icon" href="img/logo-icono.ico">
 </head>
-<body>
-  <header class="cabecera">
-    <div class="logo">
-      <a href="index.html"><img src="img/logo.png" alt="Logo Librería GranMaestre"></a>
-    </div>
-    <nav class="menu-principal">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a class="activo" href="tienda.html">Tienda</a></li>
-        <li><a href="novedades.html">Novedades</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
+
+<body class="d-flex flex-column min-vh-100 bg-white">
+
+  <!-- CABECERA -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-semibold" href="index.html">
+          <img src="img/logo.png" alt="Librería GranMaestre" height="40">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarGranMaestre"
+                aria-controls="navbarGranMaestre" aria-expanded="false" aria-label="Menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarGranMaestre">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link active fw-semibold" href="tienda.html">Tienda</a></li>
+            <li class="nav-item"><a class="nav-link" href="novedades.html">Novedades</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+
+          <ul class="navbar-nav">
+            <li class="nav-item me-3">
+              <a href="carrito.html" class="nav-link position-relative">
+                <img src="img/carrito.png" alt="Carrito" width="24" height="24">
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">0</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="cuenta.html" class="btn btn-success px-3 py-1 fw-semibold">Mi cuenta</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
-    <div class="carritoycuenta">
-      <a href="carrito.html"><img src="img/carrito.png" alt="Carrito" class="icono-carrito"></a>
-      <a href="cuenta.html" class="boton-cuenta">Mi cuenta</a>
-    </div>
   </header>
 
-  <main class="area-libro">
-    <img src="img/1984.png" alt="1984" class="portada-libro">
-    <div class="detalles-libro">
-      <h1>1984</h1>
-      <h2>George Orwell</h2>
-      <p class="precio">15,90 €</p>
-      <p><strong>Sinopsis:</strong><br>Una obra maestra de la literatura distópica que retrata un futuro dominado por la vigilancia, el control y la pérdida de libertad. Una advertencia más vigente que nunca.</p>
-      <div class="botones-compra">
-        <label for="cantidad">Cantidad:</label>
-        <input type="number" id="cantidad" class="cantidad" name="cantidad" min="1" value="1">
-        <a href="carrito.html"><button type="button" class="boton-comprar">Comprar</button></a>
-      </div>
-      <div class="info-extra">
-        <h3>Detalles del producto</h3>
-        <p>ISBN: 978-84-112244-6-7</p>
-        <p>Editorial: Debolsillo</p>
-        <p>Encuadernación: Tapa blanda</p>
-        <p>Idioma: Español</p>
+  <!-- PÁGINA PRINCIPAL -->
+  <main class="flex-grow-1 py-5">
+    <div class="container">
+      <div class="row g-5 align-items-start">
+        
+        <!-- Portada -->
+        <div class="col-12 col-md-5 text-center">
+          <img src="img/1984.png" alt="1984" class="img-fluid rounded shadow-sm mb-4" style="max-width: 80%;">
+        </div>
+
+        <!-- Detalles -->
+        <div class="col-12 col-md-7">
+          <h1 class="fw-bold mb-2">1984</h1>
+          <h4 class="text-muted mb-3">George Orwell</h4>
+          <p class="h4 text-success fw-semibold mb-4">15,90 €</p>
+
+          <p class="mb-4">
+            <strong>Sinopsis:</strong><br>
+            Una obra maestra de la literatura distópica que retrata un futuro dominado por la vigilancia, el control y la pérdida de libertad.  
+            Una advertencia más vigente que nunca.
+          </p>
+
+          <div class="d-flex align-items-center gap-3 mb-4">
+            <label for="cantidad" class="fw-semibold">Cantidad:</label>
+            <input type="number" id="cantidad" class="form-control text-center" style="width:80px;" value="1" min="1">
+            <a href="carrito.html" class="btn btn-success fw-semibold px-4">Comprar</a>
+          </div>
+
+          <div class="border-top pt-3">
+            <h5 class="fw-bold mb-2 text-success">Detalles del producto</h5>
+            <ul class="list-unstyled mb-0">
+              <li><strong>ISBN:</strong> 978-84-112244-6-7</li>
+              <li><strong>Editorial:</strong> Debolsillo</li>
+              <li><strong>Encuadernación:</strong> Tapa blanda</li>
+              <li><strong>Idioma:</strong> Español</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </main>
 
-  <footer class="pie-pagina">
-    <div class="zona-inferior-footer">
-      <p>© 2025 Juan Galisteo | Todos los derechos reservados</p>
+  <!-- PIE DE PÁGINA -->
+  <footer class="bg-dark text-white mt-auto pt-5 pb-3">
+    <div class="container">
+      <div class="row text-center text-md-start">
+        <div class="col-md-4 mb-4">
+          <h4 class="text-success">Librería GranMaestre</h4>
+          <p>
+            En Librería GranMaestre creemos en el poder transformador de la lectura.
+            Nuestro catálogo está cuidadosamente seleccionado para todos.
+          </p>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <h4 class="text-success">Enlaces</h4>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
+            <li><a href="tienda.html" class="text-white text-decoration-none">Tienda</a></li>
+            <li><a href="novedades.html" class="text-white text-decoration-none">Novedades</a></li>
+            <li><a href="contacto.html" class="text-white text-decoration-none">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <h4 class="text-success">Contacto</h4>
+          <p>Calle de la Sabiduría 33<br>39512 Madrid, España</p>
+          <p>info@granmaestre.com</p>
+          <p>+34 666 999 333</p>
+        </div>
+      </div>
+
+      <div class="border-top border-secondary pt-3 text-center small">
+        <a href="https://creativecommons.org" class="text-white text-decoration-none">MEDAC DAW</a> © 2025 by 
+        <a href="https://creativecommons.org" class="text-white text-decoration-none">Juan Bautista Galisteo Marqués</a> 
+        is licensed under 
+        <a href="https://creativecommons.org/licenses/by-nd/4.0/" class="text-white text-decoration-none">CC BY-ND 4.0</a>
+      </div>
     </div>
   </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

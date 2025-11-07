@@ -4,122 +4,198 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Novedades — Librería GranMaestre</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
+  <!-- Iconos -->
   <link rel="icon" type="image/png" href="img/logo.png">
-  <link rel="icon" type="image/x-icon" href="/img/logo-icono.ico">
+  <link rel="icon" type="image/x-icon" href="img/logo-icono.ico">
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100 bg-white">
+
+  <!-- ================================= -->
   <!-- CABECERA -->
-  <header class="cabecera">
-    <div class="logo">
-      <a href="index.html"><img src="img/logo.png" alt="Logo Librería GranMaestre"></a>
-    </div>
-    <nav class="menu-principal">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="tienda.html">Tienda</a></li>
-        <li><a class="activo" href="novedades.html">Novedades</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
+  <!-- ================================= -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-semibold" href="index.html">
+          <img src="img/logo.png" alt="Librería GranMaestre" height="40">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarGranMaestre"
+                aria-controls="navbarGranMaestre" aria-expanded="false" aria-label="Menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarGranMaestre">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
+            <li class="nav-item"><a class="nav-link active fw-semibold" href="novedades.html">Novedades</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+
+          <ul class="navbar-nav">
+            <li class="nav-item me-3">
+              <a href="carrito.html" class="nav-link position-relative">
+                <img src="img/carrito.png" alt="Carrito" width="24" height="24">
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">0</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="cuenta.html" class="btn btn-success px-3 py-1 fw-semibold">Mi cuenta</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
-    <div class="carritoycuenta">
-      <a href="carrito.html"><img src="img/carrito.png" alt="Carrito" class="icono-carrito"></a>
-      <a href="cuenta.html" class="boton-cuenta">Mi cuenta</a>
-    </div>
   </header>
 
-  <!-- HERO PRINCIPAL -->
-  <section class="hero-novedades">
-    <div class="contenido-hero">
-      <h1>Novedades literarias</h1>
-      <p>Las últimas NOVEDADES seleccionadas exclusivamente para ti este mes.</p>
+  <!-- ================================= -->
+  <!-- MENÚ PRINCIPAL -->
+  <!-- ================================= -->
+  <section class="hero-novedades bg-dark text-white text-center py-5">
+    <div class="container">
+      <h1 class="text-success fw-bold mb-3">Novedades</h1>
+      <p class="text-light mb-0">Las últimas NOVEDADES seleccionadas exclusivamente para ti este mes.</p>
     </div>
   </section>
 
-  <!-- GALERÍA DE NOVEDADES -->
-  <main class="contenedor-novedades">
+  <!-- ================================= -->
+  <!-- PÁGINA PRINCIPAL -->
+  <!-- ================================= -->
+  <main class="flex-grow-1 py-5">
+    <div class="container">
+      <div class="row g-4 justify-content-center">
 
-    <div class="item-novedad">
-      <div class="tarjeta-novedad">
-        <a href="libro1.html">
-          <img src="img/ego.png" alt="Ego y Supraconsciencia">
-          <div class="info-novedad">
-            <h2>Ego y Supraconsciencia</h2>
-            <p>Dr. Manuel Sans Segarra</p>
+        <!-- Libro 1 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card border-0 shadow-sm">
+            <div class="position-relative overflow-hidden rounded">
+              <a href="libro1.html">
+                <img src="img/ego.png" class="card-img-top" alt="Ego y Supraconsciencia">
+                <div class="position-absolute bottom-0 start-0 w-100 p-3"
+                     style="background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));">
+                  <h5 class="text-white mb-0">Ego y Supraconsciencia</h5>
+                  <small class="text-light">Dr. Manuel Sans Segarra</small>
+                </div>
+              </a>
+            </div>
+            <div class="card-body text-center">
+              <p class="fw-bold text-success mb-0">23,33 €</p>
+            </div>
           </div>
-        </a>
-      </div>
-      <p class="precio-novedad">23,33 €</p>
-    </div>
+        </div>
 
-    <div class="item-novedad">
-      <div class="tarjeta-novedad">
-        <a href="libro2.html">
-          <img src="img/danbrown.png" alt="El Último Secreto">
-          <div class="info-novedad">
-            <h2>El Último Secreto</h2>
-            <p>Dan Brown</p>
+        <!-- Libro 2 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card border-0 shadow-sm">
+            <div class="position-relative overflow-hidden rounded">
+              <a href="libro2.html">
+                <img src="img/danbrown.png" class="card-img-top" alt="El Último Secreto">
+                <div class="position-absolute bottom-0 start-0 w-100 p-3"
+                     style="background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));">
+                  <h5 class="text-white mb-0">El Último Secreto</h5>
+                  <small class="text-light">Dan Brown</small>
+                </div>
+              </a>
+            </div>
+            <div class="card-body text-center">
+              <p class="fw-bold text-success mb-0">21,90 €</p>
+            </div>
           </div>
-        </a>
-      </div>
-      <p class="precio-novedad">21,90 €</p>
-    </div>
+        </div>
 
-    <div class="item-novedad">
-      <div class="tarjeta-novedad">
-        <a href="libro3.html">
-          <img src="img/trama.png" alt="La Trama Masónica">
-          <div class="info-novedad">
-            <h2>La Trama Masónica</h2>
-            <p>Manuel Guerra</p>
+        <!-- Libro 3 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card border-0 shadow-sm">
+            <div class="position-relative overflow-hidden rounded">
+              <a href="libro3.html">
+                <img src="img/trama.png" class="card-img-top" alt="La Trama Masónica">
+                <div class="position-absolute bottom-0 start-0 w-100 p-3"
+                     style="background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));">
+                  <h5 class="text-white mb-0">La Trama Masónica</h5>
+                  <small class="text-light">Manuel Guerra</small>
+                </div>
+              </a>
+            </div>
+            <div class="card-body text-center">
+              <p class="fw-bold text-success mb-0">19,95 €</p>
+            </div>
           </div>
-        </a>
-      </div>
-      <p class="precio-novedad">19,95 €</p>
-    </div>
+        </div>
 
-    <div class="item-novedad">
-      <div class="tarjeta-novedad">
-        <a href="libro4.html">
-          <img src="img/libertad.png" alt="Libertad o Tiranía">
-          <div class="info-novedad">
-            <h2>Libertad o Tiranía</h2>
-            <p>Cristina Martín Jiménez</p>
+        <!-- Libro 4 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card border-0 shadow-sm">
+            <div class="position-relative overflow-hidden rounded">
+              <a href="libro4.html">
+                <img src="img/libertad.png" class="card-img-top" alt="Libertad o Tiranía">
+                <div class="position-absolute bottom-0 start-0 w-100 p-3"
+                     style="background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));">
+                  <h5 class="text-white mb-0">Libertad o Tiranía</h5>
+                  <small class="text-light">Cristina Martín Jiménez</small>
+                </div>
+              </a>
+            </div>
+            <div class="card-body text-center">
+              <p class="fw-bold text-success mb-0">22,50 €</p>
+            </div>
           </div>
-        </a>
-      </div>
-      <p class="precio-novedad">22,50 €</p>
-    </div>
+        </div>
 
+      </div>
+    </div>
   </main>
 
-  <!-- PIE DE PÁGINA -->
-  <footer class="pie-pagina">
-    <div class="zona-superior-footer">
-      <div class="columna-footer">
-        <h4>Librería GranMaestre</h4>
-        <p>
-          En Librería GranMaestre creemos en el poder transformador de la lectura.
-          Nuestro catálogo está cuidadosamente seleccionado para todos.
-        </p>
+  <!-- ================================= -->
+  <!-- FOOTER -->
+  <!-- ================================= -->
+  <footer class="bg-dark text-white mt-auto pt-5 pb-3">
+    <div class="container">
+      <div class="row text-center text-md-start">
+        <div class="col-md-4 mb-4">
+          <h4 class="text-success">Librería GranMaestre</h4>
+          <p>
+            En Librería GranMaestre creemos en el poder transformador de la lectura.
+            Nuestro catálogo está cuidadosamente seleccionado para todos.
+          </p>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <h4 class="text-success">Enlaces</h4>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
+            <li><a href="tienda.html" class="text-white text-decoration-none">Tienda</a></li>
+            <li><a href="novedades.html" class="text-white text-decoration-none">Novedades</a></li>
+            <li><a href="contacto.html" class="text-white text-decoration-none">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <h4 class="text-success">Contacto</h4>
+          <p>Calle de la Sabiduría 33<br>39512 Córdoba, España</p>
+          <p>info@granmaestre.com</p>
+          <p>+34 666 999 333</p>
+        </div>
       </div>
-      <div class="columna-footer">
-        <h4>Enlaces</h4>
-        <a href="index.html">Inicio</a>
-        <a href="tienda.html">Tienda</a>
-        <a href="novedades.html">Novedades</a>
-        <a href="contacto.html">Contacto</a>
+
+      <div class="border-top border-secondary pt-3 text-center small">
+        <a href="https://creativecommons.org" class="text-white text-decoration-none">MEDAC DAW</a> © 2025 by 
+        <a href="https://creativecommons.org" class="text-white text-decoration-none">Juan Bautista Galisteo Marqués</a> 
+        is licensed under 
+        <a href="https://creativecommons.org/licenses/by-nd/4.0/" class="text-white text-decoration-none">CC BY-ND 4.0</a>
+        <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width:1em;max-height:1em;margin-left:.2em;">
       </div>
-      <div class="columna-footer">
-        <h4>Contacto</h4>
-        <p>Calle de la Sabiduría 33<br>39512 Córdoba, España</p>
-        <p>info@granmaestre.com</p>
-        <p>+34 666 999 333</p>
-      </div>
-    </div>
-    <div class="zona-inferior-footer">
-      <p>© 2025 Juan Galisteo | Todos los derechos reservados</p>
     </div>
   </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

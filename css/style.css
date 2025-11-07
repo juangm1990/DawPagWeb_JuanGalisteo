@@ -407,6 +407,18 @@ html, body {
   box-shadow: 0 6px 15px rgba(0,0,0,0.25);
 }
 
+/* Ajuste del tamaño de las portadas en la tienda */
+.card-img-top {
+  max-width: 70%;      /* reduce el tamaño dentro de su columna */
+  margin: 0 auto;      /* centra la imagen */
+  display: block;
+}
+
+.card-img-top:hover {
+  transform: scale(1.04);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
 /* ========================================= */
 /* NOVEDADES          
 /* ========================================= */
