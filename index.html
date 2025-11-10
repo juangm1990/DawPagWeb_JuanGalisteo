@@ -2,234 +2,243 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Librería GranMaestre</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Librería GranMaestre</title>
 
-    <!-- Bootstrap CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Iconos -->
-    <link rel="icon" type="image/png" href="img/logo.png" />
-    <link rel="icon" type="image/x-icon" href="img/logo-icono.ico" />
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Iconos -->
+  <link rel="icon" type="image/png" href="img/logo.png" />
+  <link rel="icon" type="image/x-icon" href="img/logo-icono.ico" />
 </head>
 
 <body class="d-flex flex-column min-vh-100 bg-white">
 
-    <!-- ================================= -->
-    <!-- CABECERA -->
-    <!-- ================================= -->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm">
-            <div class="container">
-                <a class="navbar-brand fw-semibold" href="index.html">
-                    <img src="img/logo.png" alt="Librería GranMaestre" height="40">
-                </a>
+  <!-- ================================= -->
+  <!-- CABECERA -->
+  <!-- ================================= -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-semibold" href="index.html">
+          <img src="img/logo.png" alt="Librería GranMaestre" height="40">
+        </a>
 
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarGranMaestre" aria-controls="navbarGranMaestre" aria-expanded="false"
+          aria-label="Menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarGranMaestre" aria-controls="navbarGranMaestre" aria-expanded="false"
-                    aria-label="Menú">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <div class="collapse navbar-collapse" id="navbarGranMaestre">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
+            <li class="nav-item"><a class="nav-link" href="novedades.html">Novedades</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
 
-                <div class="collapse navbar-collapse" id="navbarGranMaestre">
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
-                        <li class="nav-item"><a class="nav-link" href="novedades.html">Novedades</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-                    </ul>
-
-                    <ul class="navbar-nav">
-                        <li class="nav-item me-3">
-                            <a href="carrito.html" class="nav-link position-relative">
-                                <img src="img/carrito.png" alt="Carrito" width="24" height="24">
-                                <span
-                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">0</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="cuenta.html" class="btn btn-success px-3 py-1 fw-semibold">Mi cuenta</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- ================================= -->
-    <!-- PÁGINA PRINCIPAL -->
-    <!-- ================================= -->
-    <main class="flex-grow-1">
-
-        <!-- BUSCADOR -->
-        <section class="zona-buscador text-center bg-dark py-3">
-            <input type="text" placeholder="Buscar por título, autor o ISBN">
-            <button>Buscar</button>
-        </section><br>
-
-        <!-- IMAGEN PRINCIPAL -->
-        <section class="imagen-portada my-4 text-center">
-            <a href="tienda.html" class="portada-enlace">
-                <img src="img/portada.png" alt="Estantería con libros" class="img-fluid rounded">
-            </a>
-        </section><br>
-
-        <!-- NOVEDADES -->
-        <section class="bloque-novedades py-5">
-            <div class="container text-center">
-                <h2 class="fw-bold mb-4">Novedades</h2>
-                <div class="row g-4 justify-content-center">
-
-                    <div class="col-6 col-md-3">
-                        <a href="libro1.html" class="tarjeta-libro d-block text-decoration-none text-dark">
-                            <img src="img/ego.png" alt="Ego y Supraconsciencia"
-                                class="img-fluid rounded shadow-sm mb-2">
-                            <h3 class="h6 fw-semibold mb-0">Ego y Supraconsciencia</h3>
-                            <p class="text-muted mb-1">Dr. Manuel Sans Segarra</p>
-                            <p class="fw-bold text-success">23,33 €</p>
-                        </a>
-                    </div>
-
-                    <div class="col-6 col-md-3">
-                        <a href="libro2.html" class="tarjeta-libro d-block text-decoration-none text-dark">
-                            <img src="img/danbrown.png" alt="El Último Secreto"
-                                class="img-fluid rounded shadow-sm mb-2">
-                            <h3 class="h6 fw-semibold mb-0">El Último Secreto</h3>
-                            <p class="text-muted mb-1">Dan Brown</p>
-                            <p class="fw-bold text-success">21,90 €</p>
-                        </a>
-                    </div>
-
-                    <div class="col-6 col-md-3">
-                        <a href="libro3.html" class="tarjeta-libro d-block text-decoration-none text-dark">
-                            <img src="img/trama.png" alt="La Trama Masónica" class="img-fluid rounded shadow-sm mb-2">
-                            <h3 class="h6 fw-semibold mb-0">La Trama Masónica</h3>
-                            <p class="text-muted mb-1">Manuel Guerra</p>
-                            <p class="fw-bold text-success">19,95 €</p>
-                        </a>
-                    </div>
-
-                    <div class="col-6 col-md-3">
-                        <a href="libro4.html" class="tarjeta-libro d-block text-decoration-none text-dark">
-                            <img src="img/libertad.png" alt="Libertad o Tiranía"
-                                class="img-fluid rounded shadow-sm mb-2">
-                            <h3 class="h6 fw-semibold mb-0">Libertad o Tiranía</h3>
-                            <p class="text-muted mb-1">Cristina Martín Jiménez</p>
-                            <p class="fw-bold text-success">22,50 €</p>
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-        </section><br><br>
-
-        <!-- SOBRE NOSOTROS -->
-        <section class="bloque-sobre py-5 bg-dark text-white">
-            <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-center gap-5">
-                <div class="texto-sobre text-center text-lg-start">
-                    <h2 class="text-success fw-bold mb-3">Nuestra filosofía</h2>
-                    <p class="mb-3">
-                        En Librería GranMaestre creemos que un libro puede cambiar una vida.
-                        Promovemos la lectura como un camino hacia el conocimiento, la libertad
-                        y el crecimiento personal. Nuestro compromiso es ofrecerte obras que
-                        inspiren, enseñen y transformen.
-                    </p>
-                    <a href="contacto.html" class="btn btn-success px-4">Conócenos más</a>
-                </div>
-                <div class="imagen-sobre">
-                    <img src="img/filosofia.png" alt="Persona leyendo en una librería"
-                        class="img-fluid rounded shadow-lg" width="350">
-                </div>
-            </div>
-        </section><br><br>
-
-        <!-- PROMOCIONES -->
-        <section class="bloque-promociones py-5 bg-white">
-            <div class="container">
-                <div class="row g-4 justify-content-center">
-                    <div class="col-12 col-md-4">
-                        <a href="compra.html"
-                            class="tarjeta-promocion d-block text-decoration-none text-center text-dark">
-                            <img src="img/compra-online.png" alt="Compra online y recógelo en nuestra librería"
-                                class="img-fluid rounded shadow-sm mb-2">
-                            <h3 class="h6 fw-semibold">Compra online y recógelo en nuestra librería</h3>
-                        </a>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <a href="firmados.html"
-                            class="tarjeta-promocion d-block text-decoration-none text-center text-dark">
-                            <img src="img/autores.png" alt="Libros firmados por tu autor favorito"
-                                class="img-fluid rounded shadow-sm mb-2">
-                            <h3 class="h6 fw-semibold">Libros firmados por tu autor favorito</h3>
-                        </a>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <a href="socio.html"
-                            class="tarjeta-promocion d-block text-decoration-none text-center text-dark">
-                            <img src="img/socio.png" alt="Hazte socio en menos de un minuto"
-                                class="img-fluid rounded shadow-sm mb-2">
-                            <h3 class="h6 fw-semibold">Hazte socio en menos de un minuto</h3>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section><br><br>
-    </main>
-
-    <!-- ================================= -->
-    <!-- FOOTER -->
-    <!-- ================================= -->
-    <footer class="bg-dark text-white mt-auto pt-5 pb-3">
-        <div class="container">
-            <div class="row text-center text-md-start">
-                <div class="col-md-4 mb-4">
-                    <h4 class="text-success">Librería GranMaestre</h4>
-                    <p>
-                        En Librería GranMaestre creemos en el poder transformador de la lectura.
-                        Nuestro catálogo está cuidadosamente seleccionado para todos.
-                    </p>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <h4 class="text-success">Enlaces</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
-                        <li><a href="tienda.html" class="text-white text-decoration-none">Tienda</a></li>
-                        <li><a href="novedades.html" class="text-white text-decoration-none">Novedades</a></li>
-                        <li><a href="contacto.html" class="text-white text-decoration-none">Contacto</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <h4 class="text-success">Contacto</h4>
-                    <p>Calle de la Sabiduría 33<br>39512 Córdoba, España</p>
-                    <p>info@granmaestre.com</p>
-                    <p>+34 666 999 333</p>
-                </div>
-            </div>
-
-            <div class="border-top border-secondary pt-3 text-center small">
-                <a href="https://creativecommons.org" class="text-white text-decoration-none">MEDAC DAW</a> © 2025 by
-                <a href="https://creativecommons.org" class="text-white text-decoration-none">Juan Bautista Galisteo
-                    Marqués</a>
-                is licensed under
-                <a href="https://creativecommons.org/licenses/by-nd/4.0/" class="text-white text-decoration-none">CC
-                    BY-ND 4.0</a>
-                <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt=""
-                    style="max-width: 1em;max-height:1em;margin-left:.2em;">
-                <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt=""
-                    style="max-width: 1em;max-height:1em;margin-left:.2em;">
-                <img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt=""
-                    style="max-width: 1em;max-height:1em;margin-left:.2em;">
-            </div>
+          <ul class="navbar-nav">
+            <li class="nav-item me-3">
+              <a href="carrito.html" class="nav-link position-relative">
+                <img src="img/carrito.png" alt="Carrito" width="24" height="24">
+                <span
+                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">0</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="cuenta.html" class="btn btn-success px-3 py-1 fw-semibold">Mi cuenta</a>
+            </li>
+          </ul>
         </div>
-    </footer>
+      </div>
+    </nav>
+  </header>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- ================================= -->
+  <!-- PÁGINA PRINCIPAL -->
+  <!-- ================================= -->
+  <main class="flex-grow-1">
+
+    <!-- BUSCADOR -->
+    <section class="zona-buscador text-center bg-dark py-3">
+      <input type="text" placeholder="Buscar por título, autor o ISBN">
+      <button>Buscar</button>
+    </section><br>
+
+    <!-- IMAGEN PRINCIPAL -->
+    <section class="imagen-portada my-4 text-center">
+      <a href="tienda.html" class="portada-enlace">
+        <img src="img/portada.png" alt="Estantería con libros" class="img-fluid rounded">
+      </a>
+    </section><br>
+
+    <!-- NOVEDADES -->
+    <section class="bloque-novedades py-5">
+      <div class="container text-center">
+        <h2 class="fw-bold mb-4">Novedades</h2>
+        <div class="row g-4 justify-content-center">
+
+          <div class="col-6 col-md-3">
+            <a href="libro1.html" class="tarjeta-libro d-block text-decoration-none text-dark">
+              <img src="img/ego.png" alt="Ego y Supraconsciencia"
+                class="img-fluid rounded shadow-sm mb-2">
+              <h3 class="h6 fw-semibold mb-0">Ego y Supraconsciencia</h3>
+              <p class="text-muted mb-1">Dr. Manuel Sans Segarra</p>
+              <p class="fw-bold text-success">23,33 €</p>
+            </a>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <a href="libro2.html" class="tarjeta-libro d-block text-decoration-none text-dark">
+              <img src="img/danbrown.png" alt="El Último Secreto"
+                class="img-fluid rounded shadow-sm mb-2">
+              <h3 class="h6 fw-semibold mb-0">El Último Secreto</h3>
+              <p class="text-muted mb-1">Dan Brown</p>
+              <p class="fw-bold text-success">21,90 €</p>
+            </a>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <a href="libro3.html" class="tarjeta-libro d-block text-decoration-none text-dark">
+              <img src="img/trama.png" alt="La Trama Masónica" class="img-fluid rounded shadow-sm mb-2">
+              <h3 class="h6 fw-semibold mb-0">La Trama Masónica</h3>
+              <p class="text-muted mb-1">Manuel Guerra</p>
+              <p class="fw-bold text-success">19,95 €</p>
+            </a>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <a href="libro4.html" class="tarjeta-libro d-block text-decoration-none text-dark">
+              <img src="img/libertad.png" alt="Libertad o Tiranía"
+                class="img-fluid rounded shadow-sm mb-2">
+              <h3 class="h6 fw-semibold mb-0">Libertad o Tiranía</h3>
+              <p class="text-muted mb-1">Cristina Martín Jiménez</p>
+              <p class="fw-bold text-success">22,50 €</p>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section><br><br>
+
+    <!-- SOBRE NOSOTROS -->
+    <section class="bloque-sobre py-5 bg-dark text-white">
+      <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-center gap-5">
+        <div class="texto-sobre text-center text-lg-start">
+          <h2 class="text-success fw-bold mb-3">Nuestra filosofía</h2>
+          <p class="mb-3">
+            En Librería GranMaestre creemos que un libro puede cambiar una vida.
+            Promovemos la lectura como un camino hacia el conocimiento, la libertad
+            y el crecimiento personal. Nuestro compromiso es ofrecerte obras que
+            inspiren, enseñen y transformen.
+          </p>
+          <a href="contacto.html" class="btn btn-success px-4">Conócenos más</a>
+        </div>
+        <div class="imagen-sobre">
+          <img src="img/filosofia.png" alt="Persona leyendo en una librería"
+            class="img-fluid rounded shadow-lg" width="350">
+        </div>
+      </div>
+    </section><br><br>
+
+    <!-- PROMOCIONES -->
+    <section class="bloque-promociones py-5 bg-white">
+      <div class="container">
+        <div class="row g-4 justify-content-center">
+          <div class="col-12 col-md-4">
+            <a href="compra.html"
+              class="tarjeta-promocion d-block text-decoration-none text-center text-dark">
+              <img src="img/compra-online.png" alt="Compra online y recógelo en nuestra librería"
+                class="img-fluid rounded shadow-sm mb-2">
+              <h3 class="h6 fw-semibold">Compra online y recógelo en nuestra librería</h3>
+            </a>
+          </div>
+          <div class="col-12 col-md-4">
+            <a href="firmados.html"
+              class="tarjeta-promocion d-block text-decoration-none text-center text-dark">
+              <img src="img/autores.png" alt="Libros firmados por tu autor favorito"
+                class="img-fluid rounded shadow-sm mb-2">
+              <h3 class="h6 fw-semibold">Libros firmados por tu autor favorito</h3>
+            </a>
+          </div>
+          <div class="col-12 col-md-4">
+            <a href="socio.html"
+              class="tarjeta-promocion d-block text-decoration-none text-center text-dark">
+              <img src="img/socio.png" alt="Hazte socio en menos de un minuto"
+                class="img-fluid rounded shadow-sm mb-2">
+              <h3 class="h6 fw-semibold">Hazte socio en menos de un minuto</h3>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section><br><br>
+  </main>
+
+  <!-- ================================= -->
+  <!-- MÚSICA DE FONDO -->
+  <!-- ================================= -->
+  <div class="audio-fondo position-fixed" style="bottom:20px; right:20px; z-index:1050;">
+    <audio controls loop style="width:200px; opacity:0.85; border-radius:10px;">
+      <source src="audio/musica.mp3" type="audio/mpeg">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+  </div>
+
+  <!-- ================================= -->
+  <!-- FOOTER -->
+  <!-- ================================= -->
+  <footer class="bg-dark text-white mt-auto pt-5 pb-3">
+    <div class="container">
+      <div class="row text-center text-md-start">
+        <div class="col-md-4 mb-4">
+          <h4 class="text-success">Librería GranMaestre</h4>
+          <p>
+            En Librería GranMaestre creemos en el poder transformador de la lectura.
+            Nuestro catálogo está cuidadosamente seleccionado para todos.
+          </p>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <h4 class="text-success">Enlaces</h4>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white text-decoration-none">Inicio</a></li>
+            <li><a href="tienda.html" class="text-white text-decoration-none">Tienda</a></li>
+            <li><a href="novedades.html" class="text-white text-decoration-none">Novedades</a></li>
+            <li><a href="contacto.html" class="text-white text-decoration-none">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <h4 class="text-success">Contacto</h4>
+          <p>Calle de la Sabiduría 33<br>39512 Córdoba, España</p>
+          <p>info@granmaestre.com</p>
+          <p>+34 666 999 333</p>
+        </div>
+      </div>
+
+      <div class="border-top border-secondary pt-3 text-center small">
+        <a href="https://creativecommons.org" class="text-white text-decoration-none">MEDAC DAW</a> © 2025 by
+        <a href="https://creativecommons.org" class="text-white text-decoration-none">Juan Bautista Galisteo
+          Marqués</a>
+        is licensed under
+        <a href="https://creativecommons.org/licenses/by-nd/4.0/" class="text-white text-decoration-none">CC
+          BY-ND 4.0</a>
+        <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt=""
+          style="max-width: 1em;max-height:1em;margin-left:.2em;">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt=""
+          style="max-width: 1em;max-height:1em;margin-left:.2em;">
+        <img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt=""
+          style="max-width: 1em;max-height:1em;margin-left:.2em;">
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
