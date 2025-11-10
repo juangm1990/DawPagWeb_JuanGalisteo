@@ -1,14 +1,28 @@
-@charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+// ==========================
+// VARIABLES PRINCIPALES
+// ==========================
+$color-verde: #198754;
+$color-fondo: #ffffff;
+$color-oscuro: #212529;
+$color-gris: #6c757d;
+$fuente-base: 'Poppins', sans-serif;
+
+// ==========================
+// ESTILOS GENERALES
+// ==========================
 body {
-  font-family: "Poppins", sans-serif;
-  background-color: #ffffff;
-  color: #212529;
+  font-family: $fuente-base;
+  background-color: $color-fondo;
+  color: $color-oscuro;
 }
+
 
 /* ========================================= */
 /* HOME 
 /* ========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -17,7 +31,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
   color: #333;
   background-color: #fff;
 }
@@ -317,6 +331,7 @@ body {
 /* ========================================= */
 /* TIENDA 
 /* ========================================= */
+
 /* Activo en menú */
 .menu-principal a.activo {
   color: #009f60;
@@ -446,6 +461,7 @@ body {
 /* ========================================= */
 /* NOVEDADES          
 /* ========================================= */
+
 /* HERO PRINCIPAL */
 .hero-novedades {
   background-color: #1f2c3d;
@@ -550,9 +566,11 @@ body {
   text-align: center;
 }
 
+
 /* ========================================= */
 /* INTERFAZ LIBROS 
 /* ========================================= */
+
 /* Activo en menú */
 .menu-principal a.activo {
   color: #009f60;
@@ -649,6 +667,7 @@ input.cantidad {
 /* ========================================= */
 /* CONTACTO 
 /* ========================================= */
+
 /* Activo en menú */
 .menu-principal a.activo {
   color: #009f60;
@@ -701,7 +720,7 @@ input.cantidad {
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-top: 5px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .boton-enviar {
@@ -741,6 +760,7 @@ input.cantidad {
 /* ========================================= */
 /* CARRITO 
 /* ========================================= */
+
 /* CUERPO DEL CARRITO */
 .area-carrito {
   max-width: 1000px;
@@ -817,9 +837,11 @@ input.cantidad {
   background-color: #00784b;
 }
 
+
 /* ========================================= */
 /* PAGO 
 /* ========================================= */
+
 /* CUERPO PRINCIPAL */
 .area-pago {
   max-width: 800px;
@@ -860,15 +882,15 @@ input.cantidad {
   font-weight: 500;
 }
 
-.bloque-formulario input[type=text],
-.bloque-formulario input[type=email],
-.bloque-formulario input[type=tel] {
+.bloque-formulario input[type="text"],
+.bloque-formulario input[type="email"],
+.bloque-formulario input[type="tel"] {
   width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-top: 5px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* RESUMEN FINAL */
@@ -900,6 +922,7 @@ input.cantidad {
 /* ========================================= */
 /* CUENTA 
 /* ========================================= */
+
 /* CONTENEDOR PRINCIPAL */
 .area-login {
   display: flex;
@@ -951,7 +974,7 @@ input.cantidad {
   font-size: 14px;
   outline: none;
   transition: border-color 0.2s;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .formulario-login input:focus {
@@ -992,4 +1015,3 @@ input.cantidad {
   color: #009f60;
 }
 
-/*# sourceMappingURL=style.css.map */
