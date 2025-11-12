@@ -12005,6 +12005,18 @@ body {
   font-weight: 600;
 }
 
+/* Centrar correctamente las tarjetas de Novedades */
+.bloque-novedades .row {
+  justify-content: center !important;
+  text-align: center;
+}
+
+.bloque-novedades .col-6,
+.bloque-novedades .col-md-3 {
+  display: flex;
+  justify-content: center;
+}
+
 .galeria-libros {
   display: flex;
   justify-content: center;
