@@ -12059,6 +12059,21 @@ body {
   padding: 32px;
 }
 
+.bloque-promociones .row {
+  justify-content: center !important; /* centra las columnas dentro del contenedor */
+  text-align: center;
+}
+
+.bloque-promociones .col-12,
+.bloque-promociones .col-md-4 {
+  display: flex;
+  justify-content: center;
+}
+
+.bloque-promociones .tarjeta-promocion {
+  max-width: 320px; /* evita que se estiren demasiado */
+}
+
 .tarjeta-promocion {
   width: 300px;
   text-align: center;
