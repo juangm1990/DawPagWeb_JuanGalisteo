@@ -1,0 +1,122 @@
+/* ========================================= */
+/* TIENDA */
+/* ========================================= */
+
+/* Categorías superiores */
+.zona-categorias {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.lista-categorias {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  padding: 14px 10px;
+  flex-wrap: wrap;
+
+  a {
+    text-decoration: none;
+    color: #1f2c3d;
+    font-size: 14px;
+    transition: color 0.2s;
+
+    &:hover {
+      color: #009f60;
+    }
+  }
+}
+
+/* Título de sección */
+.titulo-seccion {
+  max-width: 1200px;
+  margin: 24px auto 8px;
+  padding: 0 16px;
+
+  h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0;
+    text-transform: uppercase;
+  }
+}
+
+/* Grid de libros */
+.grid-libros {
+  max-width: 1200px;
+  margin: 16px auto 40px;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  justify-items: center;
+
+  .tarjeta-libro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-decoration: none;
+    color: #333;
+    border-radius: 6px;
+    transition: transform 0.25s, box-shadow 0.25s;
+    cursor: pointer;
+    width: 180px;
+    min-height: 430px;
+
+    img {
+      width: 100%;
+      height: 270px;
+      object-fit: cover;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    h3 {
+      font-size: 15px;
+      margin: 10px 0 4px;
+      font-weight: 600;
+    }
+
+    .autor {
+      font-size: 13px;
+      color: #666;
+      margin: 0 0 4px;
+    }
+
+    .formato {
+      font-size: 12px;
+      color: #777;
+      margin: 0 0 6px;
+    }
+
+    .envio {
+      font-size: 12px;
+      color: #009f60;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    &:hover {
+      transform: translateY(-6px);
+    }
+
+    &:hover img {
+      transform: scale(1.04);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
+/* Pequeña mejora en la imagen de tarjeta genérica */
+.card-img-top {
+  max-width: 70%;
+  margin: 0 auto;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+}
