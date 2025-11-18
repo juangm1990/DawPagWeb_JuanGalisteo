@@ -1,0 +1,95 @@
+/* ========================================= */
+/* FOOTER */
+/* ========================================= */
+.pie-pagina {
+  background-color: #1f2c3d;
+  color: #fff;
+  padding: 35px 20px 15px;
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.4;
+
+  .zona-superior-footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    text-align: left;
+  }
+
+  .columna-footer {
+    width: 250px;
+
+    h4 {
+      color: #009f60;
+      margin-bottom: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      margin-top: 8px;
+      font-size: 0.8rem;
+
+      &:hover {
+        color: #009f60;
+      }
+    }
+  }
+
+  .zona-inferior-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.65rem !important;
+    color: #fff;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-size: inherit;
+
+      &:hover {
+        color: #009f60;
+      }
+    }
+
+    img {
+      max-width: 0.8em;
+      max-height: 0.8em;
+      margin-left: 0.2em;
+      opacity: 0.8;
+      vertical-align: middle;
+    }
+  }
+}
+
+/* Distribuir columnas uniformemente */
+.pie-pagina .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Anchos iguales para las 3 columnas */
+.pie-pagina .col-md-4 {
+  width: 33%;
+  
+}
+
+/* Alinear textos correctamente */
+.pie-pagina .col-md-4:nth-child(1) {
+  text-align: center;
+  
+}
+
+.pie-pagina .col-md-4:nth-child(2) {
+  text-align: center;   /* ENLACES CENTRADO */
+  
+}
+
+.pie-pagina .col-md-4:nth-child(3) {
+  text-align: center;
+}

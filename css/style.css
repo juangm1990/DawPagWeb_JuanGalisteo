@@ -1,10 +1,313 @@
 @charset "UTF-8";
+/* ========================================= */
+/* HOME 
+/* ========================================= */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  color: #333;
+  background-color: #fff;
+}
+
+/* CABECERA (versión anterior, no la de bootstrap navbar) */
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.menu-principal ul {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-principal a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.menu-principal a:hover {
+  color: #009f60;
+}
+
+.carritoycuenta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icono-carrito {
+  width: 26px;
+  height: 26px;
+  transition: transform 0.2s;
+}
+
+.icono-carrito:hover {
+  transform: scale(1.1);
+}
+
+.boton-cuenta {
+  background-color: #009f60;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.boton-cuenta:hover {
+  background-color: #00784b;
+}
+
+/* BUSCADOR */
+.zona-buscador {
+  background-color: #1f2c3d;
+  display: flex;
+  justify-content: center;
+  padding: 14px;
+}
+
+.zona-buscador input {
+  width: 40%;
+  padding: 8px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.zona-buscador button {
+  background-color: #009f60;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* PORTADA */
+.imagen-portada {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  margin-top: 40px;
+}
+
+.portada-enlace img {
+  width: 90%;
+  max-width: 1200px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+
+/* NOVEDADES INICIO */
+.bloque-novedades {
+  text-align: center;
+  padding: 40px 0;
+  background-color: #fff;
+}
+
+.bloque-novedades h2, .bloque-novedades .h2 {
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.bloque-novedades .row {
+  justify-content: center !important;
+  text-align: center;
+}
+
+.bloque-novedades .col-6,
+.bloque-novedades .col-md-3 {
+  display: flex;
+  justify-content: center;
+}
+
+/* PROMOCIONES */
+.bloque-promociones {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: #fff;
+  padding: 32px;
+}
+
+.bloque-promociones .row {
+  justify-content: center !important;
+  text-align: center;
+}
+
+.bloque-promociones .col-12,
+.bloque-promociones .col-md-4 {
+  display: flex;
+  justify-content: center;
+}
+
+.tarjeta-promocion img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* SLIDER FADE */
+.slider-fade {
+  width: 100%;
+  height: 450px;
+  margin: 40px auto;
+  position: relative;
+  border-radius: 0px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+.fade-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: fadeSlider 12s infinite;
+}
+
+.fade-img:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.fade-img:nth-child(2) {
+  animation-delay: 4s;
+}
+
+.fade-img:nth-child(3) {
+  animation-delay: 8s;
+}
+
+@keyframes fadeSlider {
+  0% {
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+  }
+  41% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* ========================================= */
+/* FOOTER */
+/* ========================================= */
+.pie-pagina {
+  background-color: #1f2c3d;
+  color: #fff;
+  padding: 35px 20px 15px;
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+.pie-pagina .zona-superior-footer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  text-align: left;
+}
+.pie-pagina .columna-footer {
+  width: 250px;
+}
+.pie-pagina .columna-footer h4, .pie-pagina .columna-footer .h4 {
+  color: #009f60;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.pie-pagina .columna-footer a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 8px;
+  font-size: 0.8rem;
+}
+.pie-pagina .columna-footer a:hover {
+  color: #009f60;
+}
+.pie-pagina .zona-inferior-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.65rem !important;
+  color: #fff;
+}
+.pie-pagina .zona-inferior-footer a {
+  color: #fff;
+  text-decoration: none;
+  font-size: inherit;
+}
+.pie-pagina .zona-inferior-footer a:hover {
+  color: #009f60;
+}
+.pie-pagina .zona-inferior-footer img {
+  max-width: 0.8em;
+  max-height: 0.8em;
+  margin-left: 0.2em;
+  opacity: 0.8;
+  vertical-align: middle;
+}
+
+/* Distribuir columnas uniformemente */
+.pie-pagina .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Anchos iguales para las 3 columnas */
+.pie-pagina .col-md-4 {
+  width: 33%;
+}
+
+/* Alinear textos correctamente */
+.pie-pagina .col-md-4:nth-child(1) {
+  text-align: center;
+}
+
+.pie-pagina .col-md-4:nth-child(2) {
+  text-align: center; /* ENLACES CENTRADO */
+}
+
+.pie-pagina .col-md-4:nth-child(3) {
+  text-align: center;
+}
+
 /*!
  * Bootstrap  v5.3.8 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -12095,65 +12398,6 @@ body {
 .tarjeta-promocion:hover img {
   transform: scale(1.05);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
-}
-
-/* ========================================= */
-/* FOOTER */
-/* ========================================= */
-.pie-pagina {
-  background-color: #1f2c3d;
-  color: #fff;
-  padding: 35px 20px 15px;
-  margin: 0;
-  font-size: 0.8rem;
-  line-height: 1.4;
-}
-.pie-pagina .zona-superior-footer {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 18px;
-  text-align: left;
-}
-.pie-pagina .columna-footer {
-  width: 250px;
-}
-.pie-pagina .columna-footer h4, .pie-pagina .columna-footer .h4 {
-  color: #009f60;
-  margin-bottom: 10px;
-  font-size: 1rem;
-  font-weight: 600;
-}
-.pie-pagina .columna-footer a {
-  display: block;
-  color: #fff;
-  text-decoration: none;
-  margin-top: 8px;
-  font-size: 0.8rem;
-}
-.pie-pagina .columna-footer a:hover {
-  color: #009f60;
-}
-.pie-pagina .zona-inferior-footer {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 0.65rem !important;
-  color: #fff;
-}
-.pie-pagina .zona-inferior-footer a {
-  color: #fff;
-  text-decoration: none;
-  font-size: inherit;
-}
-.pie-pagina .zona-inferior-footer a:hover {
-  color: #009f60;
-}
-.pie-pagina .zona-inferior-footer img {
-  max-width: 0.8em;
-  max-height: 0.8em;
-  margin-left: 0.2em;
-  opacity: 0.8;
-  vertical-align: middle;
 }
 
 /* BLOQUE SOBRE NOSOTROS */
