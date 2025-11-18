@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* ========================================= */
-/* HOME 
+/* HOME */
 /* ========================================= */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 * {
@@ -16,7 +16,7 @@ body {
   background-color: #fff;
 }
 
-/* CABECERA (versión anterior, no la de bootstrap navbar) */
+/* CABECERA (versión antigua, ya NO usada en bootstrap pero la dejamos limpia) */
 .cabecera {
   display: flex;
   justify-content: space-between;
@@ -49,34 +49,8 @@ body {
   color: #009f60;
 }
 
-.carritoycuenta {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.icono-carrito {
-  width: 26px;
-  height: 26px;
-  transition: transform 0.2s;
-}
-
 .icono-carrito:hover {
   transform: scale(1.1);
-}
-
-.boton-cuenta {
-  background-color: #009f60;
-  color: #fff;
-  padding: 8px 14px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background-color 0.3s;
-}
-
-.boton-cuenta:hover {
-  background-color: #00784b;
 }
 
 /* BUSCADOR */
@@ -109,7 +83,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
   margin-top: 40px;
 }
 
@@ -125,7 +98,6 @@ body {
 .bloque-novedades {
   text-align: center;
   padding: 40px 0;
-  background-color: #fff;
 }
 
 .bloque-novedades h2, .bloque-novedades .h2 {
@@ -149,7 +121,6 @@ body {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  background-color: #fff;
   padding: 32px;
 }
 
@@ -175,7 +146,6 @@ body {
   height: 450px;
   margin: 40px auto;
   position: relative;
-  border-radius: 0px;
   overflow: hidden;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
 }
@@ -218,6 +188,57 @@ body {
     opacity: 0;
   }
 }
+/* ========================================= */
+/* BLOQUE SOBRE NOSOTROS (ARREGLADO) */
+/* ========================================= */
+.bloque-sobre {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 70px 60px;
+  background-color: #1f2c3d;
+  color: #fff;
+  min-height: 340px;
+  gap: 50px;
+}
+
+.texto-sobre {
+  flex: 1;
+  max-width: 600px;
+}
+
+.texto-sobre h2, .texto-sobre .h2 {
+  color: #009f60;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 32px;
+}
+
+.texto-sobre p {
+  line-height: 1.7;
+  margin-bottom: 22px;
+  font-size: 16px;
+}
+
+.boton-leer-mas {
+  background-color: #009f60;
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.boton-leer-mas:hover {
+  background-color: #00784b;
+}
+
+.imagen-sobre img {
+  width: 420px;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
 /* ========================================= */
 /* FOOTER */
 /* ========================================= */
@@ -289,7 +310,7 @@ body {
   width: 33%;
 }
 
-/* Alinear textos correctamente */
+/* Alinear textos */
 .pie-pagina .col-md-4:nth-child(2) {
   text-align: center;
 }
@@ -305,7 +326,40 @@ body {
 /* ========================================= */
 /* TIENDA */
 /* ========================================= */
-/* Categorías superiores */
+/* ----------------------------------------- */
+/* Animaciones (misma que en NOVEDADES)      */
+/* ----------------------------------------- */
+@keyframes tituloFade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes librosFade {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ----------------------------------------- */
+/* TÍTULO CON ANIMACIÓN                     */
+/* ----------------------------------------- */
+.titulo-seccion h1, .titulo-seccion .h1 {
+  opacity: 0;
+  animation: tituloFade 1.2s ease forwards;
+}
+
+/* ----------------------------------------- */
+/* CATEGORÍAS                                */
+/* ----------------------------------------- */
 .zona-categorias {
   background-color: #fff;
   border-bottom: 1px solid #eee;
@@ -328,20 +382,9 @@ body {
   color: #009f60;
 }
 
-/* Título de sección */
-.titulo-seccion {
-  max-width: 1200px;
-  margin: 24px auto 8px;
-  padding: 0 16px;
-}
-.titulo-seccion h1, .titulo-seccion .h1 {
-  font-size: 28px;
-  font-weight: 600;
-  margin: 0;
-  text-transform: uppercase;
-}
-
-/* Grid de libros */
+/* ----------------------------------------- */
+/* GRID DE LIBROS                             */
+/* ----------------------------------------- */
 .grid-libros {
   max-width: 1200px;
   margin: 16px auto 40px;
@@ -351,7 +394,60 @@ body {
   gap: 28px;
   justify-items: center;
 }
-.grid-libros .tarjeta-libro {
+
+/* ANIMACIÓN EN LAS COLUMNAS (solución real) */
+.grid-libros .col,
+.grid-libros .col-6,
+.grid-libros .col-md-3 {
+  opacity: 0;
+  animation: librosFade 1.2s ease forwards;
+}
+
+/* EFECTO EN CASCADA */
+.grid-libros .col:nth-child(1),
+.grid-libros .col-md-3:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.grid-libros .col:nth-child(2),
+.grid-libros .col-md-3:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.grid-libros .col:nth-child(3),
+.grid-libros .col-md-3:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.grid-libros .col:nth-child(4),
+.grid-libros .col-md-3:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.grid-libros .col:nth-child(5),
+.grid-libros .col-md-3:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.grid-libros .col:nth-child(6),
+.grid-libros .col-md-3:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.grid-libros .col:nth-child(7),
+.grid-libros .col-md-3:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+.grid-libros .col:nth-child(8),
+.grid-libros .col-md-3:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+/* ----------------------------------------- */
+/* TARJETA DE LIBRO                           */
+/* ----------------------------------------- */
+.tarjeta-libro {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -363,7 +459,7 @@ body {
   width: 180px;
   min-height: 430px;
 }
-.grid-libros .tarjeta-libro img {
+.tarjeta-libro img {
   width: 100%;
   height: 270px;
   object-fit: cover;
@@ -371,36 +467,38 @@ body {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.25s, box-shadow 0.25s;
 }
-.grid-libros .tarjeta-libro h3, .grid-libros .tarjeta-libro .h3 {
+.tarjeta-libro h3, .tarjeta-libro .h3 {
   font-size: 15px;
   margin: 10px 0 4px;
   font-weight: 600;
 }
-.grid-libros .tarjeta-libro .autor {
+.tarjeta-libro .autor {
   font-size: 13px;
   color: #666;
   margin: 0 0 4px;
 }
-.grid-libros .tarjeta-libro .formato {
+.tarjeta-libro .formato {
   font-size: 12px;
   color: #777;
   margin: 0 0 6px;
 }
-.grid-libros .tarjeta-libro .envio {
+.tarjeta-libro .envio {
   font-size: 12px;
   color: #009f60;
   font-weight: 600;
   margin: 0;
 }
-.grid-libros .tarjeta-libro:hover {
+.tarjeta-libro:hover {
   transform: translateY(-6px);
 }
-.grid-libros .tarjeta-libro:hover img {
+.tarjeta-libro:hover img {
   transform: scale(1.04);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
 }
 
-/* Pequeña mejora en la imagen de tarjeta genérica */
+/* ----------------------------------------- */
+/* IMAGEN GENÉRICA bootstrap                  */
+/* ----------------------------------------- */
 .card-img-top {
   max-width: 70%;
   margin: 0 auto;
@@ -413,30 +511,8 @@ body {
 }
 
 /* ========================================= */
-/* NOVEDADES */
+/* ANIMACIONES */
 /* ========================================= */
-.hero-novedades {
-  background-color: #1f2c3d;
-  color: #fff;
-  text-align: center;
-  padding: 100px 20px 80px;
-}
-.hero-novedades h1, .hero-novedades .h1 {
-  font-size: 42px;
-  color: #009f60;
-  margin-bottom: 12px;
-  font-weight: 600;
-  opacity: 0;
-  animation: tituloFade 1.5s ease forwards;
-}
-.hero-novedades p {
-  color: #f0f0f0;
-  line-height: 1.6;
-  font-size: 18px;
-  margin: 0;
-}
-
-/* Animación del título */
 @keyframes tituloFade {
   0% {
     opacity: 0;
@@ -447,85 +523,77 @@ body {
     transform: translateY(0);
   }
 }
-/* Contenedor de novedades (grid principal) */
-.contenedor-novedades {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
-  padding: 60px;
-  max-width: 1300px;
-  margin: 0 auto 60px auto;
-}
-.contenedor-novedades .item-novedad {
-  text-align: center;
-}
-.contenedor-novedades .tarjeta-novedad {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  opacity: 0;
-  animation: librosFade 1.2s ease forwards;
-}
-.contenedor-novedades .tarjeta-novedad img {
-  width: 100%;
-  height: 420px;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.3s ease;
-}
-.contenedor-novedades .tarjeta-novedad:hover {
-  transform: translateY(-6px);
-}
-.contenedor-novedades .tarjeta-novedad:hover img {
-  transform: scale(1.04);
-}
-.contenedor-novedades .tarjeta-novedad .info-novedad {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  padding: 16px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
-  color: #fff;
-  text-align: left;
-}
-.contenedor-novedades .tarjeta-novedad .info-novedad h2, .contenedor-novedades .tarjeta-novedad .info-novedad .h2 {
-  font-size: 18px;
-  font-weight: 600;
-  margin: 0 0 4px 0;
-}
-.contenedor-novedades .tarjeta-novedad .info-novedad p {
-  font-size: 13px;
-  color: #ddd;
-  margin: 0;
-}
-
-/* Animación de las tarjetas */
 @keyframes librosFade {
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(15px);
   }
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
-/* Precio debajo de la tarjeta */
-.precio-novedad {
-  margin-top: 10px;
-  font-size: 15px;
-  font-weight: 600;
-  color: #009f60;
+/* ========================================= */
+/* HERO NOVEDADES */
+/* ========================================= */
+.hero-novedades {
+  background-color: #1f2c3d;
+  color: #fff;
   text-align: center;
+  padding: 100px 20px 80px;
 }
 
-/* Vídeo de novedades */
-.video-novedades {
-  max-width: 800px;
-  margin: 0 auto;
+.hero-novedades h1, .hero-novedades .h1 {
+  font-size: 42px;
+  color: #009f60;
+  margin-bottom: 12px;
+  font-weight: 600;
+  opacity: 0;
+  animation: tituloFade 1s ease forwards;
+}
+
+.hero-novedades p {
+  color: #f0f0f0;
+  line-height: 1.6;
+  font-size: 18px;
+  margin: 0;
+}
+
+/* ========================================= */
+/* ANIMACIÓN PARA BOOTSTRAP CARDS */
+/* ========================================= */
+/* Animamos la columna completa (fade + slide) */
+.row.g-4 > div {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: librosFade 0.9s ease-out forwards;
+}
+
+/* Animamos la card SIN opacity (para evitar caja blanca) */
+.card {
+  transform: translateY(15px);
+  animation: librosFade 1.2s ease-out forwards;
+}
+
+/* Imágenes: fade + slide SUAVE sin flash */
+.card img {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: librosFade 1.3s ease-out forwards;
+  animation-delay: 0.1s;
+}
+
+/* ========================================= */
+/* HOVER */
+/* ========================================= */
+.card:hover {
+  transform: translateY(-6px);
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.04);
+  transition: transform 0.3s ease;
 }
 
 /* ========================================= */

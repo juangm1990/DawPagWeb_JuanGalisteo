@@ -1,5 +1,5 @@
 /* ========================================= */
-/* HOME 
+/* HOME */
 /* ========================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
@@ -17,7 +17,7 @@ body {
   background-color: #fff;
 }
 
-/* CABECERA (versión anterior, no la de bootstrap navbar) */
+/* CABECERA (versión antigua, ya NO usada en bootstrap pero la dejamos limpia) */
 .cabecera {
   display: flex;
   justify-content: space-between;
@@ -50,34 +50,8 @@ body {
   color: #009f60;
 }
 
-.carritoycuenta {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.icono-carrito {
-  width: 26px;
-  height: 26px;
-  transition: transform 0.2s;
-}
-
 .icono-carrito:hover {
   transform: scale(1.1);
-}
-
-.boton-cuenta {
-  background-color: #009f60;
-  color: #fff;
-  padding: 8px 14px;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: background-color 0.3s;
-}
-
-.boton-cuenta:hover {
-  background-color: #00784b;
 }
 
 /* BUSCADOR */
@@ -110,7 +84,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
   margin-top: 40px;
 }
 
@@ -126,7 +99,6 @@ body {
 .bloque-novedades {
   text-align: center;
   padding: 40px 0;
-  background-color: #fff;
 }
 
 .bloque-novedades h2 {
@@ -135,7 +107,7 @@ body {
 }
 
 .bloque-novedades .row {
-  justify-content: center !important; 
+  justify-content: center !important;
   text-align: center;
 }
 
@@ -150,7 +122,6 @@ body {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  background-color: #fff;
   padding: 32px;
 }
 
@@ -176,7 +147,6 @@ body {
   height: 450px;
   margin: 40px auto;
   position: relative;
-  border-radius: 0px;
   overflow: hidden;
   box-shadow: 0 6px 18px rgba(0,0,0,0.18);
 }
@@ -200,4 +170,56 @@ body {
   33%  { opacity: 1; }
   41%  { opacity: 0; }
   100% { opacity: 0; }
+}
+
+/* ========================================= */
+/* BLOQUE SOBRE NOSOTROS (ARREGLADO) */
+/* ========================================= */
+
+.bloque-sobre {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 70px 60px;
+  background-color: #1f2c3d;
+  color: #fff;
+  min-height: 340px;
+  gap: 50px;
+}
+
+.texto-sobre {
+  flex: 1;
+  max-width: 600px;
+}
+
+.texto-sobre h2 {
+  color: #009f60;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 32px;
+}
+
+.texto-sobre p {
+  line-height: 1.7;
+  margin-bottom: 22px;
+  font-size: 16px;
+}
+
+.boton-leer-mas {
+  background-color: #009f60;
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.boton-leer-mas:hover {
+  background-color: #00784b;
+}
+
+.imagen-sobre img {
+  width: 420px;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
 }

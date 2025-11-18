@@ -2,7 +2,34 @@
 /* TIENDA */
 /* ========================================= */
 
-/* Categorías superiores */
+/* ----------------------------------------- */
+/* Animaciones (misma que en NOVEDADES)      */
+/* ----------------------------------------- */
+
+@keyframes tituloFade {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes librosFade {
+  0% { opacity: 0; transform: translateY(25px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ----------------------------------------- */
+/* TÍTULO CON ANIMACIÓN                     */
+/* ----------------------------------------- */
+
+.titulo-seccion h1 {
+  opacity: 0;
+  animation: tituloFade 1.2s ease forwards;
+}
+
+
+/* ----------------------------------------- */
+/* CATEGORÍAS                                */
+/* ----------------------------------------- */
+
 .zona-categorias {
   background-color: #fff;
   border-bottom: 1px solid #eee;
@@ -27,21 +54,11 @@
   }
 }
 
-/* Título de sección */
-.titulo-seccion {
-  max-width: 1200px;
-  margin: 24px auto 8px;
-  padding: 0 16px;
 
-  h1 {
-    font-size: 28px;
-    font-weight: 600;
-    margin: 0;
-    text-transform: uppercase;
-  }
-}
+/* ----------------------------------------- */
+/* GRID DE LIBROS                             */
+/* ----------------------------------------- */
 
-/* Grid de libros */
 .grid-libros {
   max-width: 1200px;
   margin: 16px auto 40px;
@@ -50,65 +67,107 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 28px;
   justify-items: center;
+}
 
-  .tarjeta-libro {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-decoration: none;
-    color: #333;
+/* ANIMACIÓN EN LAS COLUMNAS (solución real) */
+.grid-libros .col,
+.grid-libros .col-6,
+.grid-libros .col-md-3 {
+  opacity: 0;
+  animation: librosFade 1.2s ease forwards;
+}
+
+/* EFECTO EN CASCADA */
+.grid-libros .col:nth-child(1),
+.grid-libros .col-md-3:nth-child(1) { animation-delay: 0.1s; }
+
+.grid-libros .col:nth-child(2),
+.grid-libros .col-md-3:nth-child(2) { animation-delay: 0.2s; }
+
+.grid-libros .col:nth-child(3),
+.grid-libros .col-md-3:nth-child(3) { animation-delay: 0.3s; }
+
+.grid-libros .col:nth-child(4),
+.grid-libros .col-md-3:nth-child(4) { animation-delay: 0.4s; }
+
+.grid-libros .col:nth-child(5),
+.grid-libros .col-md-3:nth-child(5) { animation-delay: 0.5s; }
+
+.grid-libros .col:nth-child(6),
+.grid-libros .col-md-3:nth-child(6) { animation-delay: 0.6s; }
+
+.grid-libros .col:nth-child(7),
+.grid-libros .col-md-3:nth-child(7) { animation-delay: 0.7s; }
+
+.grid-libros .col:nth-child(8),
+.grid-libros .col-md-3:nth-child(8) { animation-delay: 0.8s; }
+
+
+/* ----------------------------------------- */
+/* TARJETA DE LIBRO                           */
+/* ----------------------------------------- */
+
+.tarjeta-libro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-decoration: none;
+  color: #333;
+  border-radius: 6px;
+  transition: transform 0.25s, box-shadow 0.25s;
+  cursor: pointer;
+  width: 180px;
+  min-height: 430px;
+
+  img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
     border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     transition: transform 0.25s, box-shadow 0.25s;
-    cursor: pointer;
-    width: 180px;
-    min-height: 430px;
+  }
 
-    img {
-      width: 100%;
-      height: 270px;
-      object-fit: cover;
-      border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.25s, box-shadow 0.25s;
-    }
+  h3 {
+    font-size: 15px;
+    margin: 10px 0 4px;
+    font-weight: 600;
+  }
 
-    h3 {
-      font-size: 15px;
-      margin: 10px 0 4px;
-      font-weight: 600;
-    }
+  .autor {
+    font-size: 13px;
+    color: #666;
+    margin: 0 0 4px;
+  }
 
-    .autor {
-      font-size: 13px;
-      color: #666;
-      margin: 0 0 4px;
-    }
+  .formato {
+    font-size: 12px;
+    color: #777;
+    margin: 0 0 6px;
+  }
 
-    .formato {
-      font-size: 12px;
-      color: #777;
-      margin: 0 0 6px;
-    }
+  .envio {
+    font-size: 12px;
+    color: #009f60;
+    font-weight: 600;
+    margin: 0;
+  }
 
-    .envio {
-      font-size: 12px;
-      color: #009f60;
-      font-weight: 600;
-      margin: 0;
-    }
+  &:hover {
+    transform: translateY(-6px);
+  }
 
-    &:hover {
-      transform: translateY(-6px);
-    }
-
-    &:hover img {
-      transform: scale(1.04);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
-    }
+  &:hover img {
+    transform: scale(1.04);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
   }
 }
 
-/* Pequeña mejora en la imagen de tarjeta genérica */
+
+/* ----------------------------------------- */
+/* IMAGEN GENÉRICA bootstrap                  */
+/* ----------------------------------------- */
+
 .card-img-top {
   max-width: 70%;
   margin: 0 auto;
