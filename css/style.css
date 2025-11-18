@@ -826,27 +826,90 @@ body {
   background-color: #00784b;
 }
 
-/* ========================================= */
-/* PAGO */
-/* ========================================= */
+/* ========================== */
+/* CABECERA PAGO (ARREGLADA) */
+/* ========================== */
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.cabecera .logo img {
+  height: 45px;
+}
+
+/* MENÚ */
+.menu-principal ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.menu-principal a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.menu-principal a:hover {
+  color: #009f60;
+}
+
+/* CARRITO + CUENTA */
+.carritoycuenta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* ICONO de Bootstrap */
+.carrito-icono i {
+  font-size: 24px;
+  color: #333;
+  transition: 0.2s;
+}
+
+.carrito-icono i:hover {
+  color: #009f60;
+}
+
+/* BOTÓN CUENTA */
+.boton-cuenta {
+  background: #009f60;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.boton-cuenta:hover {
+  background: #00784b;
+}
+
+/* ========================== */
+/* FORMULARIO DE PAGO */
+/* ========================== */
 .area-pago {
   max-width: 800px;
   margin: 40px auto;
   padding: 0 20px;
 }
 .area-pago h1, .area-pago .h1 {
-  font-size: 26px;
-  margin-bottom: 20px;
+  font-size: 28px;
+  margin-bottom: 25px;
 }
 
-/* FORMULARIO DE PAGO */
 .formulario-pago {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
-/* BLOQUES DE FORMULARIO */
 .bloque-formulario {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
@@ -854,49 +917,28 @@ body {
   padding: 20px;
 }
 .bloque-formulario h2, .bloque-formulario .h2 {
-  margin-top: 0;
   margin-bottom: 15px;
   color: #009f60;
-  font-size: 18px;
-}
-.bloque-formulario label {
-  display: block;
-  margin-top: 10px;
-  font-weight: 500;
-}
-.bloque-formulario input[type=text],
-.bloque-formulario input[type=email],
-.bloque-formulario input[type=tel] {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-top: 5px;
-  font-family: "Poppins", sans-serif;
 }
 
-/* RESUMEN FINAL */
 .resumen-pago {
   text-align: right;
-  margin-top: 10px;
 }
 .resumen-pago p {
   font-size: 18px;
-  margin-bottom: 10px;
 }
 
-/* BOTÓN DE CONFIRMAR */
 .boton-finalizar {
-  background-color: #009f60;
-  color: #fff;
-  border: none;
+  background: #009f60;
+  color: white;
   padding: 10px 20px;
-  border-radius: 4px;
+  border-radius: 6px;
   font-weight: 600;
-  cursor: pointer;
+  border: none;
 }
+
 .boton-finalizar:hover {
-  background-color: #00784b;
+  background: #00784b;
 }
 
 /* ========================================= */
