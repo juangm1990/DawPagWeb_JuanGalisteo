@@ -21,9 +21,7 @@
 
 <body class="d-flex flex-column min-vh-100 bg-white">
 
-  <!-- ================================= -->
-  <!-- NAVBAR BOOTSTRAP (COMO EL RESTO) -->
-  <!-- ================================= -->
+  <!-- NAVBAR -->
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm">
       <div class="container">
@@ -32,8 +30,7 @@
           <img src="img/logo.png" alt="Librería GranMaestre" height="40">
         </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarGranMaestre">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarGranMaestre">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -64,9 +61,9 @@
   </header>
 
   <!-- ================================= -->
-  <!-- CUERPO -->
+  <!-- CONTENIDO PÁGINA PAGO (ENCAPSULADO) -->
   <!-- ================================= -->
-  <main class="flex-grow-1 py-5">
+  <div class="pagina-pago flex-grow-1 py-5">
     <div class="container">
 
       <h1 class="fw-bold mb-4 text-center">Finalizar compra</h1>
@@ -74,8 +71,8 @@
       <form class="row g-4">
 
         <!-- Bloque 1 -->
-        <div class="col-12 p-4 rounded border shadow-sm">
-          <h3 class="text-success mb-3">Datos personales</h3>
+        <div class="bloque-formulario col-12">
+          <h3 class="titulo-bloque">Datos personales</h3>
 
           <div class="row g-3">
             <div class="col-sm-6">
@@ -96,8 +93,8 @@
         </div>
 
         <!-- Bloque 2 -->
-        <div class="col-12 p-4 rounded border shadow-sm">
-          <h3 class="text-success mb-3">Dirección de envío</h3>
+        <div class="bloque-formulario col-12">
+          <h3 class="titulo-bloque">Dirección de envío</h3>
 
           <div class="row g-3">
             <div class="col-sm-8">
@@ -123,8 +120,8 @@
         </div>
 
         <!-- Bloque 3 -->
-        <div class="col-12 p-4 rounded border shadow-sm">
-          <h3 class="text-success mb-3">Método de pago</h3>
+        <div class="bloque-formulario col-12">
+          <h3 class="titulo-bloque">Método de pago</h3>
 
           <div class="form-check">
             <input class="form-check-input" type="radio" name="pago" required>
@@ -143,7 +140,7 @@
         </div>
 
         <!-- Resumen -->
-        <div class="col-12 text-end mt-3">
+        <div class="col-12 text-end mt-3 resumen-pago">
           <p class="fs-5 mb-2"><strong>Total a pagar:</strong> 45,23 €</p>
           <button class="btn btn-success px-4 py-2 fw-semibold">Confirmar pedido</button>
         </div>
@@ -151,17 +148,16 @@
       </form>
 
     </div>
-  </main>
+  </div>
 
-  <!-- FOOTER (igual que siempre) -->
+  <!-- FOOTER (NO TOCAR) -->
   <footer class="pie-pagina bg-dark text-white mt-auto pt-5 pb-3">
     <div class="container">
       <div class="row text-center text-md-start">
 
         <div class="col-md-4 mb-4">
           <h4 class="text-success">Librería GranMaestre</h4>
-          <p>En Librería GranMaestre creemos en el poder transformador de la lectura.</p>
-          <p>¡Disfruta de la aventura con nosotros!</p>
+          <p>En Librería GranMaestre creemos en el poder transformador de la lectura. ¡Disfruta de la aventura con nosotros!</p>
         </div>
 
         <div class="col-md-4 mb-4">

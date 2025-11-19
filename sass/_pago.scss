@@ -1,119 +1,40 @@
 /* ========================== */
-/* CABECERA PAGO (ARREGLADA) */
+/* PÁGINA PAGO  */
 /* ========================== */
 
-.cabecera {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-  background: #fff;
-  border-bottom: 1px solid #ddd;
-}
-
-.cabecera .logo img {
-  height: 45px;
-}
-
-/* MENÚ */
-.menu-principal ul {
-  display: flex;
-  gap: 25px;
-  list-style: none;
-}
-
-.menu-principal a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-}
-
-.menu-principal a:hover {
-  color: #009f60;
-}
-
-/* CARRITO + CUENTA */
-.carritoycuenta {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-/* ICONO de Bootstrap */
-.carrito-icono i {
-  font-size: 24px;
-  color: #333;
-  transition: .2s;
-}
-
-.carrito-icono i:hover {
-  color: #009f60;
-}
-
-/* BOTÓN CUENTA */
-.boton-cuenta {
-  background: #009f60;
-  color: #fff;
-  padding: 8px 14px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.boton-cuenta:hover {
-  background: #00784b;
-}
-
-/* ========================== */
-/* FORMULARIO DE PAGO */
-/* ========================== */
-
-.area-pago {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 0 20px;
+.pagina-pago {
 
   h1 {
     font-size: 28px;
     margin-bottom: 25px;
   }
-}
 
-.formulario-pago {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
+  /* Bloques */
+  .bloque-formulario {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
 
-.bloque-formulario {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-
-  h2 {
-    margin-bottom: 15px;
-    color: #009f60;
+    .titulo-bloque {
+      color: #009f60;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
   }
-}
 
-.resumen-pago {
-  text-align: right;
-
-  p {
+  /* Resumen final */
+  .resumen-pago p {
     font-size: 18px;
   }
-}
 
-.boton-finalizar {
-  background: #009f60;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 6px;
-  font-weight: 600;
-  border: none;
-}
+  .btn {
+    transition: .2s;
+  }
 
-.boton-finalizar:hover {
-  background: #00784b;
+  .btn:hover {
+    background-color: #00784b;
+  }
 }
