@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Iniciar sesión — Librería GranMaestre</title>
+  <title>Crear cuenta — Librería GranMaestre</title>
 
   <!-- Bootstrap LOCAL -->
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
@@ -56,49 +56,66 @@
     </nav>
   </header>
 
-  <!-- FORMULARIO DE LOGIN -->
-  <main class="flex-grow-1 d-flex align-items-center justify-content-center py-5 login-area">
-    <section class="bg-white p-5 rounded-4 shadow-sm login-card">
+  <!-- FORMULARIO DE REGISTRO -->
+  <main class="flex-grow-1 d-flex align-items-center justify-content-center py-5 registro-area">
+    <section class="bg-white p-5 rounded-4 shadow-sm registro-card">
       <div class="text-center mb-4">
         <img src="img/logo.png" alt="Logo Librería GranMaestre" height="40" class="mb-3">
-        <h1 class="h4 fw-bold">Iniciar sesión</h1>
+        <h1 class="h4 fw-bold">Crear cuenta</h1>
+        <p class="small text-muted mb-0">Regístrate para disfrutar de todas las ventajas.</p>
       </div>
 
-      <form id="formLogin" method="post">
+      <form id="formRegistro" method="post">
         <div class="mb-3">
-          <input type="email" class="form-control login-input" name="email" placeholder="Correo electrónico" required>
-        </div>
-        <div class="mb-4">
-          <input type="password" class="form-control login-input" name="password" placeholder="Contraseña" required>
+          <input type="text" class="form-control registro-input" name="nombre" placeholder="Nombre y apellidos" required>
         </div>
 
-        <button type="submit" class="btn btn-success w-100 fw-semibold py-2 mb-3">Entrar</button>
+        <div class="mb-3">
+          <input type="email" class="form-control registro-input" name="email" placeholder="Correo electrónico" required>
+        </div>
 
-        <div class="d-flex justify-content-between">
-          <a href="#" class="small text-decoration-none text-success">¿Olvidaste tu contraseña?</a>
-          <a href="registro.html" class="small text-decoration-none text-success">Crear cuenta</a>
+        <div class="mb-3">
+          <input type="password" class="form-control registro-input" name="password" placeholder="Contraseña" required>
+        </div>
+
+        <div class="mb-3">
+          <input type="password" class="form-control registro-input" name="password2" placeholder="Repite la contraseña" required>
+        </div>
+
+        <div class="form-check mb-4">
+          <input class="form-check-input" type="checkbox" value="" id="checkCondiciones" required>
+          <label class="form-check-label small" for="checkCondiciones">
+            Acepto las condiciones y la política de privacidad.
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-success w-100 fw-semibold py-2 mb-3">Crear cuenta</button>
+
+        <div class="text-center">
+          <span class="small">¿Ya tienes cuenta? </span>
+          <a href="cuenta.html" class="small text-decoration-none text-success">Inicia sesión</a>
         </div>
       </form>
     </section>
   </main>
 
-  <!-- MODAL -->
-  <div class="modal fade" id="modalLoginOK" tabindex="-1">
+  <!-- MODAL REGISTRO OK -->
+  <div class="modal fade" id="modalRegistroOK" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
 
         <div class="modal-header">
-          <h5 class="modal-title">Inicio de sesión correcto</h5>
-          <button class="btn-close" data-bs-dismiss="modal"></button>
+          <h5 class="modal-title fw-semibold">Registro completado</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
         </div>
 
         <div class="modal-body text-center">
-          <img src="img/logo.png" height="45" class="mb-3">
-          <p class="mb-0">Has iniciado sesión correctamente.</p>
+          <img src="img/logo.png" alt="Logo" height="50" class="mb-3">
+          <p class="mb-0">Tu cuenta se ha creado correctamente.</p>
         </div>
 
         <div class="modal-footer">
-          <button class="btn btn-success w-100" data-bs-dismiss="modal">Aceptar</button>
+          <button type="button" class="btn btn-success w-100" data-bs-dismiss="modal">Aceptar</button>
         </div>
 
       </div>
@@ -110,11 +127,11 @@
 
   <!-- Script para activar modal -->
   <script>
-    const form = document.getElementById("formLogin");
+    const formRegistro = document.getElementById("formRegistro");
 
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      const modal = new bootstrap.Modal(document.getElementById("modalLoginOK"));
+    formRegistro.addEventListener("submit", function (e) {
+      e.preventDefault(); // evitamos envío real
+      const modal = new bootstrap.Modal(document.getElementById("modalRegistroOK"));
       modal.show();
     });
   </script>

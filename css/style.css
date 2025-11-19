@@ -951,6 +951,43 @@ body {
     opacity: 0;
   }
 }
+/* ========================================= */
+/* REGISTRO */
+/* ========================================= */
+.registro-area {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.registro-card {
+  width: 100%;
+  max-width: 460px;
+  margin: 0 auto;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+}
+
+.registro-input:focus {
+  border-color: #009f60 !important;
+  box-shadow: 0 0 0 0.15rem rgba(0, 159, 96, 0.25) !important;
+}
+
+/* Modal registro */
+#modalRegistroOK .modal-content {
+  border-radius: 12px;
+}
+
+#modalRegistroOK .modal-header,
+#modalRegistroOK .modal-footer {
+  border: none;
+}
+
+#modalRegistroOK .modal-title {
+  font-weight: 600;
+}
+
 /* sass --watch sass/style.scss css/style.css */
 /*!
  * Bootstrap  v5.3.8 (https://getbootstrap.com/)
